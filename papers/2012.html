@@ -1,0 +1,722 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>JabRef references</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript">
+<!--
+// QuickSearch script for JabRef HTML export 
+// Version: 3.0
+//
+// Copyright (c) 2006-2011, Mark Schenk
+//
+// This software is distributed under a Creative Commons Attribution 3.0 License
+// http://creativecommons.org/licenses/by/3.0/
+//
+// Features:
+// - intuitive find-as-you-type searching
+//    ~ case insensitive
+//    ~ ignore diacritics (optional)
+//
+// - search with/without Regular Expressions
+// - match BibTeX key
+//
+
+// Search settings
+var searchAbstract = true;	// search in abstract
+var searchReview = true;	// search in review
+
+var noSquiggles = true; 	// ignore diacritics when searching
+var searchRegExp = false; 	// enable RegExp searches
+
+
+if (window.addEventListener) {
+	window.addEventListener("load",initSearch,false); }
+else if (window.attachEvent) {
+	window.attachEvent("onload", initSearch); }
+
+function initSearch() {
+	// check for quick search table and searchfield
+	if (!document.getElementById('qs_table')||!document.getElementById('quicksearch')) { return; }
+
+	// load all the rows and sort into arrays
+	loadTableData();
+	
+	//find the query field
+	qsfield = document.getElementById('qs_field');
+
+	// previous search term; used for speed optimisation
+	prevSearch = '';
+
+	//find statistics location
+	stats = document.getElementById('stat');
+	setStatistics(-1);
+	
+	// set up preferences
+	initPreferences();
+
+	// shows the searchfield
+	document.getElementById('quicksearch').style.display = 'block';
+	document.getElementById('qs_field').onkeyup = quickSearch;
+}
+
+function loadTableData() {
+	// find table and appropriate rows
+	searchTable = document.getElementById('qs_table');
+	var allRows = searchTable.getElementsByTagName('tbody')[0].getElementsByTagName('tr');
+
+	// split all rows into entryRows and infoRows (e.g. abstract, review, bibtex)
+	entryRows = new Array(); infoRows = new Array(); absRows = new Array(); revRows = new Array();
+
+	// get data from each row
+	entryRowsData = new Array(); absRowsData = new Array(); revRowsData = new Array(); 
+	
+	BibTeXKeys = new Array();
+	
+	for (var i=0, k=0, j=0; i<allRows.length;i++) {
+		if (allRows[i].className.match(/entry/)) {
+			entryRows[j] = allRows[i];
+			entryRowsData[j] = stripDiacritics(getTextContent(allRows[i]));
+			allRows[i].id ? BibTeXKeys[j] = allRows[i].id : allRows[i].id = 'autokey_'+j;
+			j ++;
+		} else {
+			infoRows[k++] = allRows[i];
+			// check for abstract/review
+			if (allRows[i].className.match(/abstract/)) {
+				absRows.push(allRows[i]);
+				absRowsData[j-1] = stripDiacritics(getTextContent(allRows[i]));
+			} else if (allRows[i].className.match(/review/)) {
+				revRows.push(allRows[i]);
+				revRowsData[j-1] = stripDiacritics(getTextContent(allRows[i]));
+			}
+		}
+	}
+	//number of entries and rows
+	numEntries = entryRows.length;
+	numInfo = infoRows.length;
+	numAbs = absRows.length;
+	numRev = revRows.length;
+}
+
+function quickSearch(){
+	
+	tInput = qsfield;
+
+	if (tInput.value.length == 0) {
+		showAll();
+		setStatistics(-1);
+		qsfield.className = '';
+		return;
+	} else {
+		t = stripDiacritics(tInput.value);
+
+		if(!searchRegExp) { t = escapeRegExp(t); }
+			
+		// only search for valid RegExp
+		try {
+			textRegExp = new RegExp(t,"i");
+			closeAllInfo();
+			qsfield.className = '';
+		}
+			catch(err) {
+			prevSearch = tInput.value;
+			qsfield.className = 'invalidsearch';
+			return;
+		}
+	}
+	
+	// count number of hits
+	var hits = 0;
+
+	// start looping through all entry rows
+	for (var i = 0; cRow = entryRows[i]; i++){
+
+		// only show search the cells if it isn't already hidden OR if the search term is getting shorter, then search all
+		if(cRow.className.indexOf('noshow')==-1 || tInput.value.length <= prevSearch.length){
+			var found = false; 
+
+			if (entryRowsData[i].search(textRegExp) != -1 || BibTeXKeys[i].search(textRegExp) != -1){ 
+				found = true;
+			} else {
+				if(searchAbstract && absRowsData[i]!=undefined) {
+					if (absRowsData[i].search(textRegExp) != -1){ found=true; } 
+				}
+				if(searchReview && revRowsData[i]!=undefined) {
+					if (revRowsData[i].search(textRegExp) != -1){ found=true; } 
+				}
+			}
+			
+			if (found){
+				cRow.className = 'entry show';
+				hits++;
+			} else {
+				cRow.className = 'entry noshow';
+			}
+		}
+	}
+
+	// update statistics
+	setStatistics(hits)
+	
+	// set previous search value
+	prevSearch = tInput.value;
+}
+
+
+// Strip Diacritics from text
+// http://stackoverflow.com/questions/990904/javascript-remove-accents-in-strings
+
+// String containing replacement characters for stripping accents 
+var stripstring = 
+    'AAAAAAACEEEEIIII'+
+    'DNOOOOO.OUUUUY..'+
+    'aaaaaaaceeeeiiii'+
+    'dnooooo.ouuuuy.y'+
+    'AaAaAaCcCcCcCcDd'+
+    'DdEeEeEeEeEeGgGg'+
+    'GgGgHhHhIiIiIiIi'+
+    'IiIiJjKkkLlLlLlL'+
+    'lJlNnNnNnnNnOoOo'+
+    'OoOoRrRrRrSsSsSs'+
+    'SsTtTtTtUuUuUuUu'+
+    'UuUuWwYyYZzZzZz.';
+
+function stripDiacritics(str){
+
+    if(noSquiggles==false){
+        return str;
+    }
+
+    var answer='';
+    for(var i=0;i<str.length;i++){
+        var ch=str[i];
+        var chindex=ch.charCodeAt(0)-192;   // Index of character code in the strip string
+        if(chindex>=0 && chindex<stripstring.length){
+            // Character is within our table, so we can strip the accent...
+            var outch=stripstring.charAt(chindex);
+            // ...unless it was shown as a '.'
+            if(outch!='.')ch=outch;
+        }
+        answer+=ch;
+    }
+    return answer;
+}
+
+// http://stackoverflow.com/questions/3446170/escape-string-for-use-in-javascript-regex
+// NOTE: must escape every \ in the export code because of the JabRef Export...
+function escapeRegExp(str) {
+  return str.replace(/[-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+}
+
+function toggleInfo(articleid,info) {
+
+	var entry = document.getElementById(articleid);
+	var abs = document.getElementById('abs_'+articleid);
+	var rev = document.getElementById('rev_'+articleid);
+	var bib = document.getElementById('bib_'+articleid);
+	
+	if (abs && info == 'abstract') {
+		abs.className.indexOf('noshow') == -1?abs.className = 'abstract noshow':abs.className = 'abstract show';
+	} else if (rev && info == 'review') {
+		rev.className.indexOf('noshow') == -1?rev.className = 'review noshow':rev.className = 'review show';
+	} else if (bib && info == 'bibtex') {
+		bib.className.indexOf('noshow') == -1?bib.className = 'bibtex noshow':bib.className = 'bibtex show';
+	} else { 
+		return;
+	}
+
+	// check if one or the other is available
+	var revshow; var absshow; var bibshow;
+	(abs && abs.className.indexOf('noshow') == -1)? absshow = true: absshow = false;
+	(rev && rev.className.indexOf('noshow') == -1)? revshow = true: revshow = false;	
+	(bib && bib.className.indexOf('noshow') == -1)? bibshow = true: bibshow = false;
+	
+	// highlight original entry
+	if(entry) {
+		if (revshow || absshow || bibshow) {
+		entry.className = 'entry highlight show';
+		} else {
+		entry.className = 'entry show';
+		}
+	}
+	
+	// When there's a combination of abstract/review/bibtex showing, need to add class for correct styling
+	if(absshow) {
+		(revshow||bibshow)?abs.className = 'abstract nextshow':abs.className = 'abstract';
+	} 
+	if (revshow) {
+		bibshow?rev.className = 'review nextshow': rev.className = 'review';
+	}	
+	
+}
+
+function setStatistics (hits) {
+	if(hits < 0) { hits=numEntries; }
+	if(stats) { stats.firstChild.data = hits + '/' + numEntries}
+}
+
+function getTextContent(node) {
+	// Function written by Arve Bersvendsen
+	// http://www.virtuelvis.com
+	
+	if (node.nodeType == 3) {
+	return node.nodeValue;
+	} // text node
+	if (node.nodeType == 1 && node.className != "infolinks") { // element node
+	var text = [];
+	for (var chld = node.firstChild;chld;chld=chld.nextSibling) {
+		text.push(getTextContent(chld));
+	}
+	return text.join("");
+	} return ""; // some other node, won't contain text nodes.
+}
+
+function showAll(){
+	closeAllInfo();
+	for (var i = 0; i < numEntries; i++){ entryRows[i].className = 'entry show'; }
+}
+
+function closeAllInfo(){
+	for (var i=0; i < numInfo; i++){
+		if (infoRows[i].className.indexOf('noshow') ==-1) {
+			infoRows[i].className = infoRows[i].className + ' noshow';
+		}
+	}
+}
+
+function clearQS() {
+	qsfield.value = '';
+	showAll();
+}
+
+function redoQS(){
+	showAll();
+	quickSearch(qsfield);
+}
+
+function updateSetting(obj){
+	var option = obj.id;
+	var checked = obj.value;
+
+	switch(option)
+	 {
+	 case "opt_searchAbs":
+	   searchAbstract=!searchAbstract;
+	   redoQS();
+	   break;
+	 case "opt_searchRev":
+	   searchReview=!searchReview;
+	   redoQS();
+	   break;
+	 case "opt_useRegExp":
+	   searchRegExp=!searchRegExp;
+	   redoQS();
+	   break;
+	 case "opt_noAccents":
+	   noSquiggles=!noSquiggles;
+	   loadTableData();
+	   redoQS();
+	   break;
+	 }
+}
+
+function initPreferences(){
+	if(searchAbstract){document.getElementById("opt_searchAbs").checked = true;}
+	if(searchReview){document.getElementById("opt_searchRev").checked = true;}
+	if(noSquiggles){document.getElementById("opt_noAccents").checked = true;}
+	if(searchRegExp){document.getElementById("opt_useRegExp").checked = true;}
+	
+	if(numAbs==0) {document.getElementById("opt_searchAbs").parentNode.style.display = 'none';}
+	if(numRev==0) {document.getElementById("opt_searchRev").parentNode.style.display = 'none';}
+}
+
+function toggleSettings(){
+	var togglebutton = document.getElementById('showsettings');
+	var settings = document.getElementById('settings');
+	
+	if(settings.className == "hidden"){
+		settings.className = "show";
+		togglebutton.innerText = "close settings";
+		togglebutton.textContent = "close settings";
+	}else{
+		settings.className = "hidden";
+		togglebutton.innerText = "settings...";		
+		togglebutton.textContent = "settings...";
+	}
+}
+
+-->
+</script>
+<style type="text/css">
+body { background-color: white; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.2; padding: 1em; color: #2E2E2E; margin: auto 2em; }
+
+form#quicksearch { width: auto; border-style: solid; border-color: gray; border-width: 1px 0px; padding: 0.7em 0.5em; display:none; position:relative; }
+span#searchstat {padding-left: 1em;}
+
+div#settings { margin-top:0.7em; /* border-bottom: 1px transparent solid; background-color: #efefef; border: 1px grey solid; */ }
+div#settings ul {margin: 0; padding: 0; }
+div#settings li {margin: 0; padding: 0 1em 0 0; display: inline; list-style: none; }
+div#settings li + li { border-left: 2px #efefef solid; padding-left: 0.5em;}
+div#settings input { margin-bottom: 0px;}
+
+div#settings.hidden {display:none;}
+
+#showsettings { border: 1px grey solid; padding: 0 0.5em; float:right; line-height: 1.6em; text-align: right; }
+#showsettings:hover { cursor: pointer; }
+
+.invalidsearch { background-color: red; }
+input[type="button"] { background-color: #efefef; border: 1px #2E2E2E solid;}
+
+table { width: 100%; empty-cells: show; border-spacing: 0em 0.2em; margin: 1em 0em; border-style: none; }
+th, td { border: 1px gray solid; border-width: 1px 1px; padding: 0.5em; vertical-align: top; text-align: left; }
+th { background-color: #efefef; }
+td + td, th + th { border-left: none; }
+
+td a { color: navy; text-decoration: none; }
+td a:hover  { text-decoration: underline; }
+
+tr.noshow { display: none;}
+tr.highlight td { background-color: #EFEFEF; border-top: 2px #2E2E2E solid; font-weight: bold; }
+tr.abstract td, tr.review td, tr.bibtex td { background-color: #EFEFEF; text-align: justify; border-bottom: 2px #2E2E2E solid; }
+tr.nextshow td { border-bottom: 1px gray solid; }
+
+tr.bibtex pre { width: 100%; overflow: auto; white-space: pre-wrap;}
+p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
+
+@media print {
+	p.infolinks, #qs_settings, #quicksearch, t.bibtex { display: none !important; }
+	tr { page-break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+
+<form action="" id="quicksearch">
+<input type="text" id="qs_field" autocomplete="off" placeholder="Type to search..." /> <input type="button" onclick="clearQS()" value="clear" />
+<span id="searchstat">Matching entries: <span id="stat">0</span></span>
+<div id="showsettings" onclick="toggleSettings()">settings...</div>
+<div id="settings" class="hidden">
+<ul>
+<li><input type="checkbox" class="search_setting" id="opt_searchAbs" onchange="updateSetting(this)"><label for="opt_searchAbs"> include abstract</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_searchRev" onchange="updateSetting(this)"><label for="opt_searchRev"> include review</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_useRegExp" onchange="updateSetting(this)"><label for="opt_useRegExp"> use RegExp</label></li>
+<li><input type="checkbox" class="search_setting" id="opt_noAccents" onchange="updateSetting(this)"><label for="opt_noAccents"> ignore accents</label></li>
+</ul>
+</div>
+</form>
+<table id="qs_table" border="1">
+<thead><tr><th width="20%">Author</th><th width="30%">Title</th><th width="5%">Year</th><th width="30%">Journal/Proceedings</th><th width="10%">Reftype</th><th width="5%">DOI/URL</th></tr></thead>
+<tbody><tr id="alessandro2012identification" class="entry">
+	<td>Alessandro, C. and Nori, F.</td>
+	<td>Identification of synergies by optimization of trajectory tracking tasks <p class="infolinks">[<a href="javascript:toggleInfo('alessandro2012identification','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Biomedical Robotics and Biomechatronics (BioRob), 2012 4th IEEE RAS &amp; EMBS International Conference on, pp. 924-930&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_alessandro2012identification" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{alessandro2012identification,
+  author = {Alessandro, Cristiano and Nori, Francesco},
+  title = {Identification of synergies by optimization of trajectory tracking tasks},
+  booktitle = {Biomedical Robotics and Biomechatronics (BioRob), 2012 4th IEEE RAS &amp; EMBS International Conference on},
+  year = {2012},
+  pages = {924--930}
+}
+</pre></td>
+</tr>
+<tr id="berret2012design" class="entry">
+	<td>Berret, B., Sandini, G. and Nori, F.</td>
+	<td>Design principles for muscle-like variable impedance actuators with noise rejection property via co-contraction <p class="infolinks">[<a href="javascript:toggleInfo('berret2012design','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on, pp. 222-227&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_berret2012design" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{berret2012design,
+  author = {Berret, Bastien and Sandini, Giulio and Nori, Franco},
+  title = {Design principles for muscle-like variable impedance actuators with noise rejection property via co-contraction},
+  booktitle = {Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on},
+  year = {2012},
+  pages = {222--227}
+}
+</pre></td>
+</tr>
+<tr id="del2012contact" class="entry">
+	<td>Del Prete, A., Natale, L., Nori, F. and Metta, G.</td>
+	<td>Contact force estimations using tactile sensors and force/torque sensors <p class="infolinks">[<a href="javascript:toggleInfo('del2012contact','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Human Robot Interaction<br/>Vol. 2012, pp. 0-2&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_del2012contact" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{del2012contact,
+  author = {Del Prete, Andrea and Natale, Lorenzo and Nori, Francesco and Metta, Giorgio},
+  title = {Contact force estimations using tactile sensors and force/torque sensors},
+  journal = {Human Robot Interaction},
+  year = {2012},
+  volume = {2012},
+  pages = {0--2}
+}
+</pre></td>
+</tr>
+<tr id="fiorio2012pnrvsa" class="entry">
+	<td>Fiorio, L., Parmiggiani, A., Berret, B., Sandini, G. and Nori, F.</td>
+	<td>pnrVSA: human-like actuator with non-linear springs in agonist-antagonist configuration <p class="infolinks">[<a href="javascript:toggleInfo('fiorio2012pnrvsa','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on, pp. 502-507&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_fiorio2012pnrvsa" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{fiorio2012pnrvsa,
+  author = {Fiorio, Luca and Parmiggiani, Alberto and Berret, Bastien and Sandini, Giulio and Nori, Franco},
+  title = {pnrVSA: human-like actuator with non-linear springs in agonist-antagonist configuration},
+  booktitle = {Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on},
+  year = {2012},
+  pages = {502--507}
+}
+</pre></td>
+</tr>
+<tr id="fumagalli2012force" class="entry">
+	<td>Fumagalli, M., Ivaldi, S., Randazzo, M., Natale, L., Metta, G., Sandini, G. and Nori, F.</td>
+	<td>Force feedback exploiting tactile and proximal force/torque sensing <p class="infolinks">[<a href="javascript:toggleInfo('fumagalli2012force','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Autonomous Robots<br/>Vol. 33(4), pp. 381-398&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_fumagalli2012force" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{fumagalli2012force,
+  author = {Fumagalli, Matteo and Ivaldi, Serena and Randazzo, Marco and Natale, Lorenzo and Metta, Giorgio and Sandini, Giulio and Nori, Francesco},
+  title = {Force feedback exploiting tactile and proximal force/torque sensing},
+  journal = {Autonomous Robots},
+  publisher = {Springer US},
+  year = {2012},
+  volume = {33},
+  number = {4},
+  pages = {381--398}
+}
+</pre></td>
+</tr>
+<tr id="gori2012dforc" class="entry">
+	<td>Gori, I., Pattacini, U., Nori, F., Metta, G. and Sandini, G.</td>
+	<td>DForC: a real-time method for reaching, tracking and obstacle avoidance in humanoid robots <p class="infolinks">[<a href="javascript:toggleInfo('gori2012dforc','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on, pp. 544-551&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_gori2012dforc" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{gori2012dforc,
+  author = {Gori, Ilaria and Pattacini, Ugo and Nori, Franco and Metta, Giorgio and Sandini, Giulio},
+  title = {DForC: a real-time method for reaching, tracking and obstacle avoidance in humanoid robots},
+  booktitle = {Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on},
+  year = {2012},
+  pages = {544--551}
+}
+</pre></td>
+</tr>
+<tr id="ivaldi2012humans" class="entry">
+	<td>Ivaldi, S., Sigaud, O., Berret, B. and Nori, F.</td>
+	<td>From humans to humanoids: The optimal control framework <p class="infolinks">[<a href="javascript:toggleInfo('ivaldi2012humans','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Paladyn<br/>Vol. 3(2), pp. 75-91&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_ivaldi2012humans" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{ivaldi2012humans,
+  author = {Ivaldi, Serena and Sigaud, Olivier and Berret, Bastien and Nori, Francesco},
+  title = {From humans to humanoids: The optimal control framework},
+  journal = {Paladyn},
+  publisher = {SP Versita},
+  year = {2012},
+  volume = {3},
+  number = {2},
+  pages = {75--91}
+}
+</pre></td>
+</tr>
+<tr id="jamone2012autonomous" class="entry">
+	<td>Jamone, L., Natale, L., Nori, F., Metta, G. and Sandini, G.</td>
+	<td>Autonomous online learning of reaching behavior in a humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('jamone2012autonomous','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>International Journal of Humanoid Robotics<br/>Vol. 9(03), pp. 1250017&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_jamone2012autonomous" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{jamone2012autonomous,
+  author = {Jamone, Lorenzo and Natale, Lorenzo and Nori, Francesco and Metta, Giorgio and Sandini, Giulio},
+  title = {Autonomous online learning of reaching behavior in a humanoid robot},
+  journal = {International Journal of Humanoid Robotics},
+  publisher = {World Scientific Publishing Company},
+  year = {2012},
+  volume = {9},
+  number = {03},
+  pages = {1250017}
+}
+</pre></td>
+</tr>
+<tr id="natale2012intrinsically" class="entry">
+	<td>Natale, L., Nori, F., Metta, G., Fumagalli, M., Ivaldi, S., Pattacini, U., Randazzo, M., Schmitz, A. and Sandini, G.</td>
+	<td>Intrinsically motivated learning in natural and artificial systems <p class="infolinks">[<a href="javascript:toggleInfo('natale2012intrinsically','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>&nbsp;</td>
+	<td>book</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_natale2012intrinsically" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@book{natale2012intrinsically,
+  author = {Natale, L and Nori, F and Metta, G and Fumagalli, M and Ivaldi, S and Pattacini, U and Randazzo, M and Schmitz, A and Sandini, GG},
+  title = {Intrinsically motivated learning in natural and artificial systems},
+  publisher = {Springer-Verlag},
+  year = {2012}
+}
+</pre></td>
+</tr>
+<tr id="nori2012control" class="entry">
+	<td>Nori, F., Berret, B., Fiorio, L., Parmiggiani, A. and Sandini, G.</td>
+	<td>Control of a Single Degree of Freedom Noise Rejecting-Variable Impedance Actuator. <p class="infolinks">[<a href="javascript:toggleInfo('nori2012control','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>SyRoCo, pp. 473-478&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2012control" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{nori2012control,
+  author = {Nori, Francesco and Berret, Bastien and Fiorio, Luca and Parmiggiani, Alberto and Sandini, Giulio},
+  title = {Control of a Single Degree of Freedom Noise Rejecting-Variable Impedance Actuator.},
+  booktitle = {SyRoCo},
+  year = {2012},
+  pages = {473--478}
+}
+</pre></td>
+</tr>
+<tr id="parmiggiani2012design" class="entry">
+	<td>Parmiggiani, A., Maggiali, M., Natale, L., Nori, F., Schmitz, A., Tsagarakis, N., Victor, J.S., Becchi, F., Sandini, G. and Metta, G.</td>
+	<td>The design of the iCub humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('parmiggiani2012design','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>International journal of humanoid robotics<br/>Vol. 9(04), pp. 1250027&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_parmiggiani2012design" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{parmiggiani2012design,
+  author = {Parmiggiani, Alberto and Maggiali, Marco and Natale, Lorenzo and Nori, Francesco and Schmitz, Alexander and Tsagarakis, Nikos and Victor, Jose Santos and Becchi, Francesco and Sandini, Giulio and Metta, Giorgio},
+  title = {The design of the iCub humanoid robot},
+  journal = {International journal of humanoid robotics},
+  publisher = {World Scientific Publishing Company},
+  year = {2012},
+  volume = {9},
+  number = {04},
+  pages = {1250027}
+}
+</pre></td>
+</tr>
+<tr id="patane2012modeling" class="entry">
+	<td>Patane, L., Sciutti, A., Berret, B., Squeri, V., Masia, L., Sandini, G. and Nori, F.</td>
+	<td>Modeling kinematic forward model adaptation by modular decomposition <p class="infolinks">[<a href="javascript:toggleInfo('patane2012modeling','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Biomedical Robotics and Biomechatronics (BioRob), 2012 4th IEEE RAS &amp; EMBS International Conference on, pp. 1252-1257&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_patane2012modeling" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{patane2012modeling,
+  author = {Patane, Laura and Sciutti, Alessandra and Berret, Bastien and Squeri, Valentina and Masia, Lorenzo and Sandini, Giulio and Nori, Francesco},
+  title = {Modeling kinematic forward model adaptation by modular decomposition},
+  booktitle = {Biomedical Robotics and Biomechatronics (BioRob), 2012 4th IEEE RAS &amp; EMBS International Conference on},
+  year = {2012},
+  pages = {1252--1257}
+}
+</pre></td>
+</tr>
+<tr id="prete2012control" class="entry">
+	<td>Prete, A.D., Nori, F., Metta, G. and Natale, L.</td>
+	<td>Control of contact forces: The role of tactile feedback for contact localization <p class="infolinks">[<a href="javascript:toggleInfo('prete2012control','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on, pp. 4048-4053&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_prete2012control" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{prete2012control,
+  author = {Prete, Andrea Del and Nori, Francesco and Metta, Giorgio and Natale, Lorenzo},
+  title = {Control of contact forces: The role of tactile feedback for contact localization},
+  booktitle = {Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on},
+  year = {2012},
+  pages = {4048--4053}
+}
+</pre></td>
+</tr>
+<tr id="sciutti2012measuring" class="entry">
+	<td>Sciutti, A., Bisio, A., Nori, F., Metta, G., Fadiga, L., Pozzo, T. and Sandini, G.</td>
+	<td>Measuring human-robot interaction through motor resonance <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2012measuring','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>International Journal of Social Robotics<br/>Vol. 4(3), pp. 223-234&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_sciutti2012measuring" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{sciutti2012measuring,
+  author = {Sciutti, Alessandra and Bisio, Ambra and Nori, Francesco and Metta, Giorgio and Fadiga, Luciano and Pozzo, Thierry and Sandini, Giulio},
+  title = {Measuring human-robot interaction through motor resonance},
+  journal = {International Journal of Social Robotics},
+  publisher = {Springer Netherlands},
+  year = {2012},
+  volume = {4},
+  number = {3},
+  pages = {223--234}
+}
+</pre></td>
+</tr>
+<tr id="sciutti2012anticipatory" class="entry">
+	<td>Sciutti, A., Bisio, A., Nori, F., Metta, G., Fadiga, L. and Sandini, G.</td>
+	<td>Anticipatory gaze in human-robot interactions <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2012anticipatory','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>Gaze in HRI from modeling to communication'' workshop at the 7th ACM/IEEE international conference on human-robot interaction, Boston, Massachusetts, USA&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_sciutti2012anticipatory" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{sciutti2012anticipatory,
+  author = {Sciutti, Alessandra and Bisio, Ambra and Nori, Francesco and Metta, Giorgio and Fadiga, Luciano and Sandini, Giulio},
+  title = {Anticipatory gaze in human-robot interactions},
+  journal = {Gaze in HRI from modeling to communication'' workshop at the 7th ACM/IEEE international conference on human-robot interaction, Boston, Massachusetts, USA},
+  year = {2012}
+}
+</pre></td>
+</tr>
