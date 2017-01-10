@@ -1,5 +1,8 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>JabRef references</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript">
 <!--
 // QuickSearch script for JabRef HTML export 
@@ -344,37 +347,22 @@ function toggleSettings(){
 
 -->
 </script>
-
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html>
-<head>
-<title>Francesco Nori's home page'</title>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
-<link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-<div class="container">
-  <div class="navigation"> 
-	  <a href="index.html" title="Home">Home</a> 
-	  <a href="publications.html" title="Publications">Publications</a> 
-	  <a href="research.html" title="Research">Research</a> 
-	  <a href="bio.html" title="Biography">Biography</a> 
-  </div>
-  <div class="logo"> <b>Francesco Nori</b> <em>Dynamic Interaction Control</em> </div>
-  <div class="leftcontent">
-    <br />
-    
-<!-- close nav -->
-<div id="left-publications">
-<h2>Publications</h2><br/>
- 
-Please consider checking also
-<a href="http://scholar.google.com/citations?user=AqlbAj8AAAAJ">my google scholar profile</a>.
- 
 <style type="text/css">
+body { background-color: white; font-family: Arial, sans-serif; font-size: 13px; line-height: 1.2; padding: 1em; color: #2E2E2E; margin: auto 2em; }
 
 form#quicksearch { width: auto; border-style: solid; border-color: gray; border-width: 1px 0px; padding: 0.7em 0.5em; display:none; position:relative; }
 span#searchstat {padding-left: 1em;}
+
+div#settings { margin-top:0.7em; /* border-bottom: 1px transparent solid; background-color: #efefef; border: 1px grey solid; */ }
+div#settings ul {margin: 0; padding: 0; }
+div#settings li {margin: 0; padding: 0 1em 0 0; display: inline; list-style: none; }
+div#settings li + li { border-left: 2px #efefef solid; padding-left: 0.5em;}
+div#settings input { margin-bottom: 0px;}
+
+div#settings.hidden {display:none;}
+
+#showsettings { border: 1px grey solid; padding: 0 0.5em; float:right; line-height: 1.6em; text-align: right; }
+#showsettings:hover { cursor: pointer; }
 
 .invalidsearch { background-color: red; }
 input[type="button"] { background-color: #efefef; border: 1px #2E2E2E solid;}
@@ -418,22 +406,268 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </form>
 <table id="qs_table" border="1">
 <thead><tr><th width="20%">Author</th><th width="30%">Title</th><th width="5%">Year</th><th width="30%">Journal/Proceedings</th><th width="10%">Reftype</th><th width="5%">DOI/URL</th></tr></thead>
-<tbody><tr id="camoriano2016incremental" class="entry">
-	<td>Camoriano, R., Traversaro, S., Rosasco, L., Metta, G. and Nori, F.</td>
-	<td>Incremental Semiparametric Inverse Dynamics Learning <p class="infolinks">[<a href="javascript:toggleInfo('camoriano2016incremental','bibtex')">BibTeX</a>]</p></td>
-	<td>2016</td>
-	<td>arXiv preprint arXiv:1601.04549&nbsp;</td>
+<tbody><tr id="geisert2017regularized" class="entry">
+	<td>Geisert, M., Del Prete, A., Mansard, N., Romano, F. and Nori, F.</td>
+	<td>Regularized Hierarchical Differential Dynamic Programming <p class="infolinks">[<a href="javascript:toggleInfo('geisert2017regularized','bibtex')">BibTeX</a>]</p></td>
+	<td>2017</td>
+	<td>IEEE Transactions on Robotics (conditionally accepted)&nbsp;</td>
 	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_geisert2017regularized" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{geisert2017regularized,
+  author = {Geisert, Mathieu and Del Prete, Andrea and Mansard, Nicolas and Romano, Francesco and Nori, Francesco},
+  title = {Regularized Hierarchical Differential Dynamic Programming},
+  journal = {IEEE Transactions on Robotics (conditionally accepted)},
+  year = {2017}
+}
+</pre></td>
+</tr>
+<tr id="romano2017whole" class="entry">
+	<td>Romano, F., Traversaro, S., Pucci, D., Eljaik, J., Del Prete, A. and Nori, F.</td>
+	<td>A Whole-Body Software Abstraction layer for Control Design of free-floating Mechanical Systems <p class="infolinks">[<a href="javascript:toggleInfo('romano2017whole','bibtex')">BibTeX</a>]</p></td>
+	<td>2017</td>
+	<td>arXiv preprint arXiv:1701.00935&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_romano2017whole" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{romano2017whole,
+  author = {Romano, Francesco and Traversaro, Silvio and Pucci, Daniele and Eljaik, Jorhabib and Del Prete, Andrea and Nori, Francesco},
+  title = {A Whole-Body Software Abstraction layer for Control Design of free-floating Mechanical Systems},
+  journal = {arXiv preprint arXiv:1701.00935},
+  year = {2017}
+}
+</pre></td>
+</tr>
+<tr id="bartolozzi2016robots" class="entry">
+	<td>Bartolozzi, C., Natale, L., Nori, F. and Metta, G.</td>
+	<td>Robots with a sense of touch <p class="infolinks">[<a href="javascript:toggleInfo('bartolozzi2016robots','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Nature Materials<br/>Vol. 15(9), pp. 921-925&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_bartolozzi2016robots" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{bartolozzi2016robots,
+  author = {Bartolozzi, Chiara and Natale, Lorenzo and Nori, Francesco and Metta, Giorgio},
+  title = {Robots with a sense of touch},
+  journal = {Nature Materials},
+  publisher = {Nature Research},
+  year = {2016},
+  volume = {15},
+  number = {9},
+  pages = {921--925}
+}
+</pre></td>
+</tr>
+<tr id="camoriano2016incremental" class="entry">
+	<td>Camoriano, R., Traversaro, S., Rosasco, L., Metta, G. and Nori, F.</td>
+	<td>Incremental semiparametric inverse dynamics learning <p class="infolinks">[<a href="javascript:toggleInfo('camoriano2016incremental','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>2016 IEEE International Conference on Robotics and Automation (ICRA), pp. 544-550&nbsp;</td>
+	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_camoriano2016incremental" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@article{camoriano2016incremental,
+@inproceedings{camoriano2016incremental,
   author = {Camoriano, Raffaello and Traversaro, Silvio and Rosasco, Lorenzo and Metta, Giorgio and Nori, Francesco},
-  title = {Incremental Semiparametric Inverse Dynamics Learning},
-  journal = {arXiv preprint arXiv:1601.04549},
+  title = {Incremental semiparametric inverse dynamics learning},
+  booktitle = {2016 IEEE International Conference on Robotics and Automation (ICRA)},
+  year = {2016},
+  pages = {544--550}
+}
+</pre></td>
+</tr>
+<tr id="charbonneau2016line" class="entry">
+	<td>Charbonneau, M., Nori, F. and Pucci, D.</td>
+	<td>On-line joint limit avoidance for torque controlled robots by joint space parametrization <p class="infolinks">[<a href="javascript:toggleInfo('charbonneau2016line','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 899-904&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_charbonneau2016line" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{charbonneau2016line,
+  author = {Charbonneau, Marie and Nori, Francesco and Pucci, Daniele},
+  title = {On-line joint limit avoidance for torque controlled robots by joint space parametrization},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {899--904}
+}
+</pre></td>
+</tr>
+<tr id="chavez2016model" class="entry">
+	<td>Chavez, F.J.A., Traversaro, S., Pucci, D. and Nori, F.</td>
+	<td>Model based in situ calibration of six axis force torque sensors <p class="infolinks">[<a href="javascript:toggleInfo('chavez2016model','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 422-427&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_chavez2016model" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{chavez2016model,
+  author = {Chavez, Francisco Javier Andrade and Traversaro, Silvio and Pucci, Daniele and Nori, Francesco},
+  title = {Model based in situ calibration of six axis force torque sensors},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {422--427}
+}
+</pre></td>
+</tr>
+<tr id="dafarra2016torque" class="entry">
+	<td>Dafarra, S., Romano, F. and Nori, F.</td>
+	<td>Torque-controlled stepping-strategy push recovery: Design and implementation on the iCub humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('dafarra2016torque','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 152-157&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_dafarra2016torque" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{dafarra2016torque,
+  author = {Dafarra, Stefano and Romano, Francesco and Nori, Francesco},
+  title = {Torque-controlled stepping-strategy push recovery: Design and implementation on the iCub humanoid robot},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {152--157}
+}
+</pre></td>
+</tr>
+<tr id="del2016implementing" class="entry">
+	<td>Del Prete, A., Mansard, N., Ramos, O.E., Stasse, O. and Nori, F.</td>
+	<td>Implementing torque control with high-ratio gear boxes and without joint-torque sensors <p class="infolinks">[<a href="javascript:toggleInfo('del2016implementing','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>International Journal of Humanoid Robotics<br/>Vol. 13(01), pp. 1550044&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_del2016implementing" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{del2016implementing,
+  author = {Del Prete, Andrea and Mansard, Nicolas and Ramos, Oscar E and Stasse, Olivier and Nori, Francesco},
+  title = {Implementing torque control with high-ratio gear boxes and without joint-torque sensors},
+  journal = {International Journal of Humanoid Robotics},
+  publisher = {World Scientific Publishing Company},
+  year = {2016},
+  volume = {13},
+  number = {01},
+  pages = {1550044}
+}
+</pre></td>
+</tr>
+<tr id="guedelha2016self" class="entry">
+	<td>Guedelha, N., Kuppuswamy, N., Traversaro, S. and Nori, F.</td>
+	<td>Self-calibration of joint offsets for humanoid robots using accelerometer measurements <p class="infolinks">[<a href="javascript:toggleInfo('guedelha2016self','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 1233-1238&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_guedelha2016self" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{guedelha2016self,
+  author = {Guedelha, Nuno and Kuppuswamy, Naveen and Traversaro, Silvio and Nori, Francesco},
+  title = {Self-calibration of joint offsets for humanoid robots using accelerometer measurements},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {1233--1238}
+}
+</pre></td>
+</tr>
+<tr id="hu2016squat" class="entry">
+	<td>Hu, Y., Nori, F. and Mombaur, K.</td>
+	<td>Squat motion generation for the humanoid robot iCub with Series Elastic Actuators <p class="infolinks">[<a href="javascript:toggleInfo('hu2016squat','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Biomedical Robotics and Biomechatronics (BioRob), 2016 6th IEEE International Conference on, pp. 207-212&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_hu2016squat" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{hu2016squat,
+  author = {Hu, Yue and Nori, Francesco and Mombaur, Katja},
+  title = {Squat motion generation for the humanoid robot iCub with Series Elastic Actuators},
+  booktitle = {Biomedical Robotics and Biomechatronics (BioRob), 2016 6th IEEE International Conference on},
+  year = {2016},
+  pages = {207--212}
+}
+</pre></td>
+</tr>
+<tr id="hu2016walking" class="entry">
+	<td>Hu, Y., Eljaik, J., Stein, K., Nori, F. and Mombaur, K.</td>
+	<td>Walking of the iCub humanoid robot in different scenarios: implementation and performance analysis <p class="infolinks">[<a href="javascript:toggleInfo('hu2016walking','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 690-696&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_hu2016walking" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{hu2016walking,
+  author = {Hu, Yue and Eljaik, Jorhabib and Stein, Kevin and Nori, Francesco and Mombaur, Katja},
+  title = {Walking of the iCub humanoid robot in different scenarios: implementation and performance analysis},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {690--696}
+}
+</pre></td>
+</tr>
+<tr id="kangro2016skin" class="entry">
+	<td>Kangro, J., Traversaro, S., Pucci, D. and Nori, F.</td>
+	<td>Skin Normal Force Calibration Using Vacuum Bags <p class="infolinks">[<a href="javascript:toggleInfo('kangro2016skin','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>arXiv preprint arXiv:1609.09720&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_kangro2016skin" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{kangro2016skin,
+  author = {Kangro, Joan and Traversaro, Silvio and Pucci, Daniele and Nori, Francesco},
+  title = {Skin Normal Force Calibration Using Vacuum Bags},
+  journal = {arXiv preprint arXiv:1609.09720},
   year = {2016}
+}
+</pre></td>
+</tr>
+<tr id="latella2016weardy" class="entry">
+	<td>Latella, C., Kuppuswamy, N., Nori, F., Rossi, M., Dini, L., Passeri, D., Terranova, M.L. and Antisari, M.V.</td>
+	<td>WearDY: Wearable dynamics. A prototype for human whole-body force and motion estimation <p class="infolinks">[<a href="javascript:toggleInfo('latella2016weardy','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td><br/>Vol. 1749(1)AIP Conference Proceedings, pp. 020011&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_latella2016weardy" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{latella2016weardy,
+  author = {Latella, Claudia and Kuppuswamy, Naveen and Nori, Francesco and Rossi, Marco and Dini, Luciana and Passeri, Daniele and Terranova, Maria Letizia and Antisari, Marco Vittori},
+  title = {WearDY: Wearable dynamics. A prototype for human whole-body force and motion estimation},
+  booktitle = {AIP Conference Proceedings},
+  year = {2016},
+  volume = {1749},
+  number = {1},
+  pages = {020011}
 }
 </pre></td>
 </tr>
@@ -460,6 +694,27 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
+<tr id="lyon2016embodied" class="entry">
+	<td>Lyon, C., Nehaniv, C.L., Saunders, J., Belpaeme, T., Bisio, A., Fischer, K., F&ouml;rster, F., Lehmann, H., Metta, G., Mohan, V. and others</td>
+	<td>Embodied Language Learning and Cognitive Bootstrapping: Methods and Design Principles <p class="infolinks">[<a href="javascript:toggleInfo('lyon2016embodied','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Int J Adv Robot Syst<br/>Vol. 13, pp. 105&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_lyon2016embodied" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{lyon2016embodied,
+  author = {Lyon, Caroline and Nehaniv, Chrystopher L and Saunders, Joe and Belpaeme, Tony and Bisio, Ambra and Fischer, Kerstin and F&ouml;rster, Frank and Lehmann, Hagen and Metta, Giorgio and Mohan, Vishwanathan and others},
+  title = {Embodied Language Learning and Cognitive Bootstrapping: Methods and Design Principles},
+  journal = {Int J Adv Robot Syst},
+  year = {2016},
+  volume = {13},
+  pages = {105}
+}
+</pre></td>
+</tr>
 <tr id="nava2016stability" class="entry">
 	<td>Nava, G., Romano, F., Nori, F. and Pucci, D.</td>
 	<td>Stability Analysis and Design of Momentum-based Controllers for Humanoid Robots <p class="infolinks">[<a href="javascript:toggleInfo('nava2016stability','bibtex')">BibTeX</a>]</p></td>
@@ -479,9 +734,167 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
+<tr id="padois2016whole" class="entry">
+	<td>Padois, V., Ivaldi, S., Babi&ccaron;, J., Mistry, M., Peters, J. and Nori, F.</td>
+	<td>Whole-body multi-contact motion in humans and humanoids: Advances of the CoDyCo European project <p class="infolinks">[<a href="javascript:toggleInfo('padois2016whole','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Robotics and Autonomous Systems&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_padois2016whole" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{padois2016whole,
+  author = {Padois, Vincent and Ivaldi, Serena and Babi&ccaron;, Jan and Mistry, Michael and Peters, Jan and Nori, Francesco},
+  title = {Whole-body multi-contact motion in humans and humanoids: Advances of the CoDyCo European project},
+  journal = {Robotics and Autonomous Systems},
+  publisher = {North-Holland},
+  year = {2016}
+}
+</pre></td>
+</tr>
+<tr id="pucci2016automatic" class="entry">
+	<td>Pucci, D., Nava, G. and Nori, F.</td>
+	<td>Automatic gain tuning of a momentum based balancing controller for humanoid robots <p class="infolinks">[<a href="javascript:toggleInfo('pucci2016automatic','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 158-164&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_pucci2016automatic" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{pucci2016automatic,
+  author = {Pucci, Daniele and Nava, Gabriele and Nori, Francesco},
+  title = {Automatic gain tuning of a momentum based balancing controller for humanoid robots},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {158--164}
+}
+</pre></td>
+</tr>
+<tr id="pucci2016highly" class="entry">
+	<td>Pucci, D., Romano, F., Traversaro, S. and Nori, F.</td>
+	<td>Highly dynamic balancing via force control <p class="infolinks">[<a href="javascript:toggleInfo('pucci2016highly','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 141-141&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_pucci2016highly" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{pucci2016highly,
+  author = {Pucci, Daniele and Romano, Francesco and Traversaro, Silvio and Nori, Francesco},
+  title = {Highly dynamic balancing via force control},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {141--141}
+}
+</pre></td>
+</tr>
+<tr id="romano2016sensitivity" class="entry">
+	<td>Romano, F., Pucci, D., Traversaro, S. and Nori, F.</td>
+	<td>The Sensitivity of the Static Center of Pressure as a Criterion to assess Balancing Controllers Performance <p class="infolinks">[<a href="javascript:toggleInfo('romano2016sensitivity','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>arXiv preprint arXiv:1610.01495&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_romano2016sensitivity" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{romano2016sensitivity,
+  author = {Romano, Francesco and Pucci, Daniele and Traversaro, Silvio and Nori, Francesco},
+  title = {The Sensitivity of the Static Center of Pressure as a Criterion to assess Balancing Controllers Performance},
+  journal = {arXiv preprint arXiv:1610.01495},
+  year = {2016}
+}
+</pre></td>
+</tr>
+<tr id="romano2016stable" class="entry">
+	<td>Romano, F., Kuppuswamy, N., Ciocca, M., Traversaro, S. and Nori, F.</td>
+	<td>Stable bipedal foot planting on uneven terrain through optimal ankle impedance <p class="infolinks">[<a href="javascript:toggleInfo('romano2016stable','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 146-151&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_romano2016stable" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{romano2016stable,
+  author = {Romano, Francesco and Kuppuswamy, Naveen and Ciocca, Matteo and Traversaro, Silvio and Nori, Francesco},
+  title = {Stable bipedal foot planting on uneven terrain through optimal ankle impedance},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {146--151}
+}
+</pre></td>
+</tr>
+<tr id="traversaro2016base" class="entry">
+	<td>Traversaro, S., Pucci, D. and Nori, F.</td>
+	<td>On the base frame choice in free-floating mechanical systems and its connection to centroidal dynamics <p class="infolinks">[<a href="javascript:toggleInfo('traversaro2016base','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Submitted to Humanoid Robots (Humanoids)&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_traversaro2016base" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{traversaro2016base,
+  author = {Traversaro, Silvio and Pucci, Daniele and Nori, Francesco},
+  title = {On the base frame choice in free-floating mechanical systems and its connection to centroidal dynamics},
+  journal = {Submitted to Humanoid Robots (Humanoids)},
+  year = {2016}
+}
+</pre></td>
+</tr>
+<tr id="traversaro2016identification" class="entry">
+	<td>Traversaro, S., Brossette, S., Escande, A. and Nori, F.</td>
+	<td>Identification of fully physical consistent inertial parameters using optimization on manifolds <p class="infolinks">[<a href="javascript:toggleInfo('traversaro2016identification','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Intelligent Robots and Systems (IROS), 2016 IEEE/RSJ International Conference on, pp. 5446-5451&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_traversaro2016identification" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{traversaro2016identification,
+  author = {Traversaro, Silvio and Brossette, Stanislas and Escande, Adrien and Nori, Francesco},
+  title = {Identification of fully physical consistent inertial parameters using optimization on manifolds},
+  booktitle = {Intelligent Robots and Systems (IROS), 2016 IEEE/RSJ International Conference on},
+  year = {2016},
+  pages = {5446--5451}
+}
+</pre></td>
+</tr>
+<tr id="wiedebach2016walking" class="entry">
+	<td>Wiedebach, G., Bertrand, S., Wu, T., Fiorio, L., McCrory, S., Griffin, R., Nori, F. and Pratt, J.</td>
+	<td>Walking on partial footholds including line contacts with the humanoid robot atlas <p class="infolinks">[<a href="javascript:toggleInfo('wiedebach2016walking','bibtex')">BibTeX</a>]</p></td>
+	<td>2016</td>
+	<td>Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on, pp. 1312-1319&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_wiedebach2016walking" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{wiedebach2016walking,
+  author = {Wiedebach, Georg and Bertrand, Sylvain and Wu, Tingfan and Fiorio, Luca and McCrory, Stephen and Griffin, Robert and Nori, Francesco and Pratt, Jerry},
+  title = {Walking on partial footholds including line contacts with the humanoid robot atlas},
+  booktitle = {Humanoid Robots (Humanoids), 2016 IEEE-RAS 16th International Conference on},
+  year = {2016},
+  pages = {1312--1319}
+}
+</pre></td>
+</tr>
 <tr id="del2015prioritized" class="entry">
 	<td>Del Prete, A., Nori, F., Metta, G. and Natale, L.</td>
-	<td>Prioritized motion--force control of constrained fully-actuated robots:``Task Space Inverse Dynamics'' <p class="infolinks">[<a href="javascript:toggleInfo('del2015prioritized','bibtex')">BibTeX</a>]</p></td>
+	<td>Prioritized motion--force control of constrained fully-actuated robots:“Task Space Inverse Dynamics” <p class="infolinks">[<a href="javascript:toggleInfo('del2015prioritized','bibtex')">BibTeX</a>]</p></td>
 	<td>2015</td>
 	<td>Robotics and Autonomous Systems<br/>Vol. 63, pp. 150-157&nbsp;</td>
 	<td>article</td>
@@ -492,7 +905,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <pre>
 @article{del2015prioritized,
   author = {Del Prete, Andrea and Nori, Francesco and Metta, Giorgio and Natale, Lorenzo},
-  title = {Prioritized motion--force control of constrained fully-actuated robots:``Task Space Inverse Dynamics''},
+  title = {Prioritized motion--force control of constrained fully-actuated robots:“Task Space Inverse Dynamics”},
   journal = {Robotics and Autonomous Systems},
   publisher = {North-Holland},
   year = {2015},
@@ -540,6 +953,28 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
+<tr id="nori2015icub" class="entry">
+	<td>Nori, F., Traversaro, S., Eljaik, J., Romano, F., Del Prete, A. and Pucci, D.</td>
+	<td>iCub whole-body control through force regulation on rigid non-coplanar contacts <p class="infolinks">[<a href="javascript:toggleInfo('nori2015icub','bibtex')">BibTeX</a>]</p></td>
+	<td>2015</td>
+	<td>Frontiers in Robotics and AI<br/>Vol. 2, pp. 6&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2015icub" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{nori2015icub,
+  author = {Nori, Francesco and Traversaro, Silvio and Eljaik, Jorhabib and Romano, Francesco and Del Prete, Andrea and Pucci, Daniele},
+  title = {iCub whole-body control through force regulation on rigid non-coplanar contacts},
+  journal = {Frontiers in Robotics and AI},
+  publisher = {Frontiers},
+  year = {2015},
+  volume = {2},
+  pages = {6}
+}
+</pre></td>
+</tr>
 <tr id="nori2015simultaneous" class="entry">
 	<td>Nori, F., Kuppuswamy, N. and Traversaro, S.</td>
 	<td>Simultaneous state and dynamics estimation in articulated structures <p class="infolinks">[<a href="javascript:toggleInfo('nori2015simultaneous','bibtex')">BibTeX</a>]</p></td>
@@ -560,84 +995,23 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
-<tr id="nori2015icub" class="entry">
-	<td>Nori, F., Traversaro, S., Eljaik, J., Romano, F., Del Prete, A. and Pucci, D.</td>
-	<td>iCub whole-body control through force regulation on rigid non-coplanar contacts <p class="infolinks">[<a href="javascript:toggleInfo('nori2015icub','bibtex')">BibTeX</a>]</p></td>
-	<td>2015</td>
-	<td>Frontiers in Robotics and AI, pp. 18&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2015icub" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{nori2015icub,
-  author = {Nori, Francesco and Traversaro, Silvio and Eljaik, Jorhabib and Romano, Francesco and Del Prete, Andrea and Pucci, Daniele},
-  title = {iCub whole-body control through force regulation on rigid non-coplanar contacts},
-  journal = {Frontiers in Robotics and AI},
-  year = {2015},
-  pages = {18}
-}
-</pre></td>
-</tr>
 <tr id="paikan2015generic" class="entry">
 	<td>Paikan, A., Traversaro, S., Nori, F. and Natale, L.</td>
 	<td>A Generic Testing Framework for Test Driven Development of Robotic Systems <p class="infolinks">[<a href="javascript:toggleInfo('paikan2015generic','bibtex')">BibTeX</a>]</p></td>
 	<td>2015</td>
-	<td>Modelling and Simulation for Autonomous Systems, pp. 216-225&nbsp;</td>
-	<td>incollection</td>
+	<td>International Workshop on Modelling and Simulation for Autonomous Systems, pp. 216-225&nbsp;</td>
+	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_paikan2015generic" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@incollection{paikan2015generic,
+@inproceedings{paikan2015generic,
   author = {Paikan, Ali and Traversaro, Silvio and Nori, Francesco and Natale, Lorenzo},
   title = {A Generic Testing Framework for Test Driven Development of Robotic Systems},
-  booktitle = {Modelling and Simulation for Autonomous Systems},
-  publisher = {Springer International Publishing},
+  booktitle = {International Workshop on Modelling and Simulation for Autonomous Systems},
   year = {2015},
   pages = {216--225}
-}
-</pre></td>
-</tr>
-<tr id="prete2015implementing" class="entry">
-	<td>Prete, A.D., Mansard, N., Ramos, O.E., Stasse, O. and Nori, F.</td>
-	<td>Implementing Torque Control with High-Ratio Gear Boxes and without Joint-Torque Sensors <p class="infolinks">[<a href="javascript:toggleInfo('prete2015implementing','bibtex')">BibTeX</a>]</p></td>
-	<td>2015</td>
-	<td>International Journal of Humanoid Robotics, pp. 1550044&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_prete2015implementing" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{prete2015implementing,
-  author = {Prete, Andrea Del and Mansard, Nicolas and Ramos, Oscar E and Stasse, Olivier and Nori, Francesco},
-  title = {Implementing Torque Control with High-Ratio Gear Boxes and without Joint-Torque Sensors},
-  journal = {International Journal of Humanoid Robotics},
-  publisher = {World Scientific Publishing Company},
-  year = {2015},
-  pages = {1550044}
-}
-</pre></td>
-</tr>
-<tr id="pucci2015force" class="entry">
-	<td>Pucci, D., Romano, D., Traversaro, S., Eljaik, J. and Nori, F.</td>
-	<td>Force Control of the iCub Humanoid for One-foot Balancing and Safe Interaction <p class="infolinks">[<a href="javascript:toggleInfo('pucci2015force','bibtex')">BibTeX</a>]</p></td>
-	<td>2015</td>
-	<td>Workshop at IEEE International Conference on Robotics and Automation&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_pucci2015force" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{pucci2015force,
-  author = {Pucci, Daniele and Romano, Daniele and Traversaro, Silvio and Eljaik, Jorhabib and Nori, Francesco},
-  title = {Force Control of the iCub Humanoid for One-foot Balancing and Safe Interaction},
-  journal = {Workshop at IEEE International Conference on Robotics and Automation},
-  year = {2015}
 }
 </pre></td>
 </tr>
@@ -645,7 +1019,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Pucci, D., Romano, F. and Nori, F.</td>
 	<td>Collocated Adaptive Control of Underactuated Mechanical Systems <p class="infolinks">[<a href="javascript:toggleInfo('pucci2015collocated','bibtex')">BibTeX</a>]</p></td>
 	<td>2015</td>
-	<td>Robotics, IEEE Transactions on<br/>Vol. 31(6), pp. 1527-1536&nbsp;</td>
+	<td>IEEE Transactions on Robotics<br/>Vol. 31(6), pp. 1527-1536&nbsp;</td>
 	<td>article</td>
 	<td>&nbsp;</td>
 </tr>
@@ -655,7 +1029,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @article{pucci2015collocated,
   author = {Pucci, Daniele and Romano, Francesco and Nori, Francesco},
   title = {Collocated Adaptive Control of Underactuated Mechanical Systems},
-  journal = {Robotics, IEEE Transactions on},
+  journal = {IEEE Transactions on Robotics},
   publisher = {IEEE},
   year = {2015},
   volume = {31},
@@ -664,11 +1038,30 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
+<tr id="pucci2015force" class="entry">
+	<td>Pucci, F., Romano, D., Traversaro, S., Eljaik, J. and Nori, F.</td>
+	<td>Force control of the icub humanoid for one-foot balancing and safe interaction <p class="infolinks">[<a href="javascript:toggleInfo('pucci2015force','bibtex')">BibTeX</a>]</p></td>
+	<td>2015</td>
+	<td>Workshop at IEEE International Conference on Robotics and Automation&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_pucci2015force" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{pucci2015force,
+  author = {Pucci, F and Romano, Daniele and Traversaro, Silvio and Eljaik, Jorhabib and Nori, Francesco},
+  title = {Force control of the icub humanoid for one-foot balancing and safe interaction},
+  booktitle = {Workshop at IEEE International Conference on Robotics and Automation},
+  year = {2015}
+}
+</pre></td>
+</tr>
 <tr id="romano2015prioritized" class="entry">
 	<td>Romano, F., Del Prete, A., Mansard, N. and Nori, F.</td>
 	<td>Prioritized optimal control: A hierarchical differential dynamic programming approach <p class="infolinks">[<a href="javascript:toggleInfo('romano2015prioritized','bibtex')">BibTeX</a>]</p></td>
 	<td>2015</td>
-	<td>Robotics and Automation (ICRA), 2015 IEEE International Conference on, pp. 3590-3595&nbsp;</td>
+	<td>2015 IEEE International Conference on Robotics and Automation (ICRA), pp. 3590-3595&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -678,7 +1071,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{romano2015prioritized,
   author = {Romano, Francesco and Del Prete, Andrea and Mansard, Nicolas and Nori, Francesco},
   title = {Prioritized optimal control: A hierarchical differential dynamic programming approach},
-  booktitle = {Robotics and Automation (ICRA), 2015 IEEE International Conference on},
+  booktitle = {2015 IEEE International Conference on Robotics and Automation (ICRA)},
   year = {2015},
   pages = {3590--3595}
 }
@@ -686,19 +1079,19 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </tr>
 <tr id="romano2015whole" class="entry">
 	<td>Romano, F., Pucci, D., Traversaro, S., Eljaik, J. and Nori, F.</td>
-	<td>Whole-body Force Control of the iCub Humanoid Robot for Balancing Tasks <p class="infolinks">[<a href="javascript:toggleInfo('romano2015whole','bibtex')">BibTeX</a>]</p></td>
+	<td>Whole-body force control of the icub humanoid robot for balancing tasks <p class="infolinks">[<a href="javascript:toggleInfo('romano2015whole','bibtex')">BibTeX</a>]</p></td>
 	<td>2015</td>
 	<td>Workshop at IEEE International Conference on Robotics and Automation&nbsp;</td>
-	<td>article</td>
+	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_romano2015whole" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@article{romano2015whole,
+@inproceedings{romano2015whole,
   author = {Romano, Francesco and Pucci, Daniele and Traversaro, Silvio and Eljaik, Jorhabib and Nori, Francesco},
-  title = {Whole-body Force Control of the iCub Humanoid Robot for Balancing Tasks},
-  journal = {Workshop at IEEE International Conference on Robotics and Automation},
+  title = {Whole-body force control of the icub humanoid robot for balancing tasks},
+  booktitle = {Workshop at IEEE International Conference on Robotics and Automation},
   year = {2015}
 }
 </pre></td>
@@ -707,7 +1100,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Stramandinoli, F., Tikhanoff, V., Pattacini, U. and Nori, F.</td>
 	<td>A Bayesian approach towards affordance learning in artificial agents <p class="infolinks">[<a href="javascript:toggleInfo('stramandinoli2015bayesian','bibtex')">BibTeX</a>]</p></td>
 	<td>2015</td>
-	<td>Development and Learning and Epigenetic Robotics (ICDL-EpiRob), 2015 Joint IEEE International Conference on, pp. 298-299&nbsp;</td>
+	<td>2015 Joint IEEE International Conference on Development and Learning and Epigenetic Robotics (ICDL-EpiRob), pp. 298-299&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -717,7 +1110,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{stramandinoli2015bayesian,
   author = {Stramandinoli, Francesca and Tikhanoff, Vadim and Pattacini, Ugo and Nori, Francesco},
   title = {A Bayesian approach towards affordance learning in artificial agents},
-  booktitle = {Development and Learning and Epigenetic Robotics (ICDL-EpiRob), 2015 Joint IEEE International Conference on},
+  booktitle = {2015 Joint IEEE International Conference on Development and Learning and Epigenetic Robotics (ICDL-EpiRob)},
   year = {2015},
   pages = {298--299}
 }
@@ -727,7 +1120,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Traversaro, S., Del Prete, A., Ivaldi, S. and Nori, F.</td>
 	<td>Inertial parameters identification and joint torques estimation with proximal force/torque sensing <p class="infolinks">[<a href="javascript:toggleInfo('traversaro2015inertial','bibtex')">BibTeX</a>]</p></td>
 	<td>2015</td>
-	<td>Robotics and Automation (ICRA), 2015 IEEE International Conference on, pp. 2105-2110&nbsp;</td>
+	<td>2015 IEEE International Conference on Robotics and Automation (ICRA), pp. 2105-2110&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -737,7 +1130,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{traversaro2015inertial,
   author = {Traversaro, Silvio and Del Prete, Andrea and Ivaldi, Serena and Nori, Francesco},
   title = {Inertial parameters identification and joint torques estimation with proximal force/torque sensing},
-  booktitle = {Robotics and Automation (ICRA), 2015 IEEE International Conference on},
+  booktitle = {2015 IEEE International Conference on Robotics and Automation (ICRA)},
   year = {2015},
   pages = {2105--2110}
 }
@@ -747,7 +1140,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Traversaro, S., Pucci, D. and Nori, F.</td>
 	<td>In situ calibration of six-axis force-torque sensors using accelerometer measurements <p class="infolinks">[<a href="javascript:toggleInfo('traversaro2015situ','bibtex')">BibTeX</a>]</p></td>
 	<td>2015</td>
-	<td>Robotics and Automation (ICRA), 2015 IEEE International Conference on, pp. 2111-2116&nbsp;</td>
+	<td>2015 IEEE International Conference on Robotics and Automation (ICRA), pp. 2111-2116&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -757,7 +1150,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{traversaro2015situ,
   author = {Traversaro, Silvio and Pucci, Daniele and Nori, Francesco},
   title = {In situ calibration of six-axis force-torque sensors using accelerometer measurements},
-  booktitle = {Robotics and Automation (ICRA), 2015 IEEE International Conference on},
+  booktitle = {2015 IEEE International Conference on Robotics and Automation (ICRA)},
   year = {2015},
   pages = {2111--2116}
 }
@@ -833,7 +1226,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Ciliberto, C., Fiorio, L., Maggiali, M., Natale, L., Rosasco, L., Metta, G., Sandini, G. and Nori, F.</td>
 	<td>Exploiting global force torque measurements for local compliance estimation in tactile arrays <p class="infolinks">[<a href="javascript:toggleInfo('ciliberto2014exploiting','bibtex')">BibTeX</a>]</p></td>
 	<td>2014</td>
-	<td>Intelligent Robots and Systems (IROS 2014), 2014 IEEE/RSJ International Conference on, pp. 3994-3999&nbsp;</td>
+	<td>2014 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 3994-3999&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -841,9 +1234,9 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{ciliberto2014exploiting,
-  author = {Ciliberto, Carlo and Fiorio, Luca and Maggiali, Marco and Natale, Lorenzo and Rosasco, Lorenzo and Metta, Giorgio and Sandini, Giulio and Nori, Franco},
+  author = {Ciliberto, Carlo and Fiorio, Luca and Maggiali, Marco and Natale, Lorenzo and Rosasco, Lorenzo and Metta, Giorgio and Sandini, Giulio and Nori, Francesco},
   title = {Exploiting global force torque measurements for local compliance estimation in tactile arrays},
-  booktitle = {Intelligent Robots and Systems (IROS 2014), 2014 IEEE/RSJ International Conference on},
+  booktitle = {2014 IEEE/RSJ International Conference on Intelligent Robots and Systems},
   year = {2014},
   pages = {3994--3999}
 }
@@ -853,7 +1246,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Del Prete, A., Mansard, N., Nori, F., Metta, G. and Natale, L.</td>
 	<td>Partial force control of constrained floating-base robots <p class="infolinks">[<a href="javascript:toggleInfo('del2014partial','bibtex')">BibTeX</a>]</p></td>
 	<td>2014</td>
-	<td>Intelligent Robots and Systems (IROS 2014), 2014 IEEE/RSJ International Conference on, pp. 3227-3232&nbsp;</td>
+	<td>2014 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 3227-3232&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -861,9 +1254,9 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{del2014partial,
-  author = {Del Prete, Andrea and Mansard, Nicolas and Nori, Franco and Metta, Giorgio and Natale, Lorenzo},
+  author = {Del Prete, Andrea and Mansard, Nicolas and Nori, Francesco and Metta, Giorgio and Natale, Lorenzo},
   title = {Partial force control of constrained floating-base robots},
-  booktitle = {Intelligent Robots and Systems (IROS 2014), 2014 IEEE/RSJ International Conference on},
+  booktitle = {2014 IEEE/RSJ International Conference on Intelligent Robots and Systems},
   year = {2014},
   pages = {3227--3232}
 }
@@ -873,7 +1266,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Del Prete, A., Romano, F., Natale, L., Metta, G., Sandini, G. and Nori, F.</td>
 	<td>Prioritized optimal control <p class="infolinks">[<a href="javascript:toggleInfo('del2014prioritized','bibtex')">BibTeX</a>]</p></td>
 	<td>2014</td>
-	<td>Robotics and Automation (ICRA), 2014 IEEE International Conference on, pp. 2540-2545&nbsp;</td>
+	<td>2014 IEEE International Conference on Robotics and Automation (ICRA), pp. 2540-2545&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -881,9 +1274,9 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{del2014prioritized,
-  author = {Del Prete, Andrea and Romano, Francesco and Natale, Lorenzo and Metta, Giorgio and Sandini, Giulio and Nori, Franco},
+  author = {Del Prete, Andrea and Romano, Francesco and Natale, Lorenzo and Metta, Giorgio and Sandini, Giulio and Nori, Francesco},
   title = {Prioritized optimal control},
-  booktitle = {Robotics and Automation (ICRA), 2014 IEEE International Conference on},
+  booktitle = {2014 IEEE International Conference on Robotics and Automation (ICRA)},
   year = {2014},
   pages = {2540--2545}
 }
@@ -893,20 +1286,38 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Hoffman, E.M., Traversaro, S., Rocchi, A., Ferrati, M., Settimi, A., Romano, F., Natale, L., Bicchi, A., Nori, F. and Tsagarakis, N.G.</td>
 	<td>Yarp based plugins for gazebo simulator <p class="infolinks">[<a href="javascript:toggleInfo('hoffman2014yarp','bibtex')">BibTeX</a>]</p></td>
 	<td>2014</td>
-	<td>Modelling and Simulation for Autonomous Systems, pp. 333-346&nbsp;</td>
-	<td>incollection</td>
+	<td>International Workshop on Modelling and Simulation for Autonomous Systems, pp. 333-346&nbsp;</td>
+	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_hoffman2014yarp" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@incollection{hoffman2014yarp,
+@inproceedings{hoffman2014yarp,
   author = {Hoffman, Enrico Mingo and Traversaro, Silvio and Rocchi, Alessio and Ferrati, Mirko and Settimi, Alessandro and Romano, Francesco and Natale, Lorenzo and Bicchi, Antonio and Nori, Francesco and Tsagarakis, Nikos G},
   title = {Yarp based plugins for gazebo simulator},
-  booktitle = {Modelling and Simulation for Autonomous Systems},
-  publisher = {Springer International Publishing},
+  booktitle = {International Workshop on Modelling and Simulation for Autonomous Systems},
   year = {2014},
   pages = {333--346}
+}
+</pre></td>
+</tr>
+<tr id="ivaldi2014tools" class="entry">
+	<td>Ivaldi, S., Padois, V. and Nori, F.</td>
+	<td>Tools for dynamics simulation of robots: a survey based on user feedback <p class="infolinks">[<a href="javascript:toggleInfo('ivaldi2014tools','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>arXiv preprint arXiv:1402.7050&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_ivaldi2014tools" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{ivaldi2014tools,
+  author = {Ivaldi, Serena and Padois, Vincent and Nori, Francesco},
+  title = {Tools for dynamics simulation of robots: a survey based on user feedback},
+  journal = {arXiv preprint arXiv:1402.7050},
+  year = {2014}
 }
 </pre></td>
 </tr>
@@ -914,7 +1325,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Ivaldi, S., Peters, J., Padois, V. and Nori, F.</td>
 	<td>Tools for simulating humanoid robot dynamics: a survey based on user feedback <p class="infolinks">[<a href="javascript:toggleInfo('ivaldi2014tools','bibtex')">BibTeX</a>]</p></td>
 	<td>2014</td>
-	<td>Humanoid Robots (Humanoids), 2014 14th IEEE-RAS International Conference on, pp. 842-849&nbsp;</td>
+	<td>2014 IEEE-RAS International Conference on Humanoid Robots, pp. 842-849&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -924,7 +1335,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{ivaldi2014tools,
   author = {Ivaldi, Serena and Peters, Jan and Padois, Vincent and Nori, Francesco},
   title = {Tools for simulating humanoid robot dynamics: a survey based on user feedback},
-  booktitle = {Humanoid Robots (Humanoids), 2014 14th IEEE-RAS International Conference on},
+  booktitle = {2014 IEEE-RAS International Conference on Humanoid Robots},
   year = {2014},
   pages = {842--849}
 }
@@ -934,7 +1345,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Jamone, L., Fumagalli, M., Natale, L., Nori, F., Metta, G. and Sandini, G.</td>
 	<td>Control of physical interaction through tactile and force sensing during visually guided reaching <p class="infolinks">[<a href="javascript:toggleInfo('jamone2014control','bibtex')">BibTeX</a>]</p></td>
 	<td>2014</td>
-	<td>Intelligent Control (ISIC), 2014 IEEE International Symposium on, pp. 1360-1365&nbsp;</td>
+	<td>2014 IEEE International Symposium on Intelligent Control (ISIC), pp. 1360-1365&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -942,11 +1353,164 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{jamone2014control,
-  author = {Jamone, Lorenzo and Fumagalli, Matteo and Natale, Lorenzo and Nori, Franco and Metta, Giorgio and Sandini, Giulio},
+  author = {Jamone, Lorenzo and Fumagalli, Matteo and Natale, Lorenzo and Nori, Francesco and Metta, Giorgio and Sandini, Giulio},
   title = {Control of physical interaction through tactile and force sensing during visually guided reaching},
-  booktitle = {Intelligent Control (ISIC), 2014 IEEE International Symposium on},
+  booktitle = {2014 IEEE International Symposium on Intelligent Control (ISIC)},
   year = {2014},
   pages = {1360--1365}
+}
+</pre></td>
+</tr>
+<tr id="liu2014generalized" class="entry">
+	<td>Liu, M., Tan, Y., Padois, V., Liu, M., Lober, R., Padois, V., Jun, J., Padois, V., Ben Amar, F., Lober, R. and others</td>
+	<td>Generalized hierarchical control <p class="infolinks">[<a href="javascript:toggleInfo('liu2014generalized','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>Autonomous Robots, pp. 1-15&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_liu2014generalized" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{liu2014generalized,
+  author = {Liu, Mingxing and Tan, Yang and Padois, Vincent and Liu, M and Lober, R and Padois, V and Jun, JY and Padois, V and Ben Amar, F and Lober, Ryan and others},
+  title = {Generalized hierarchical control},
+  journal = {Autonomous Robots},
+  year = {2014},
+  pages = {1--15}
+}
+</pre></td>
+</tr>
+<tr id="luca2014stiction" class="entry">
+	<td>Luca Fiorio Francesco Romano, A.P.G.S.F.N.</td>
+	<td>Stiction compensation in agonist-antagonist variable stiffness actuators <p class="infolinks">[<a href="javascript:toggleInfo('luca2014stiction','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>Proceedings of Robotics: Science and Systems&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_luca2014stiction" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{luca2014stiction,
+  author = {Luca Fiorio, Francesco Romano, Alberto Parmiggiani, Giulio Sandini, Francesco Nori},
+  title = {Stiction compensation in agonist-antagonist variable stiffness actuators},
+  booktitle = {Proceedings of Robotics: Science and Systems},
+  year = {2014}
+}
+</pre></td>
+</tr>
+<tr id="luca2014stiction" class="entry">
+	<td>Luca Fiorio Francesco Romano, A.P.G.S.F.N.</td>
+	<td>Stiction compensation in agonist-antagonist variable stiffness actuators <p class="infolinks">[<a href="javascript:toggleInfo('luca2014stiction','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>Proceedings of Robotics: Science and Systems&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_luca2014stiction" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{luca2014stiction,
+  author = {Luca Fiorio, Francesco Romano, Alberto Parmiggiani, Giulio Sandini, Francesco Nori},
+  title = {Stiction compensation in agonist-antagonist variable stiffness actuators},
+  booktitle = {Proceedings of Robotics: Science and Systems},
+  year = {2014}
+}
+</pre></td>
+</tr>
+<tr id="luca2014stiction" class="entry">
+	<td>Luca Fiorio Francesco Romano, A.P.G.S.F.N.</td>
+	<td>Stiction compensation in agonist-antagonist variable stiffness actuators <p class="infolinks">[<a href="javascript:toggleInfo('luca2014stiction','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>Proceedings of Robotics: Science and Systems&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_luca2014stiction" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{luca2014stiction,
+  author = {Luca Fiorio, Francesco Romano, Alberto Parmiggiani, Giulio Sandini, Francesco Nori},
+  title = {Stiction compensation in agonist-antagonist variable stiffness actuators},
+  booktitle = {Proceedings of Robotics: Science and Systems},
+  year = {2014}
+}
+</pre></td>
+</tr>
+<tr id="luca2014stiction" class="entry">
+	<td>Luca Fiorio Francesco Romano, A.P.G.S.F.N.</td>
+	<td>Stiction compensation in agonist-antagonist variable stiffness actuators <p class="infolinks">[<a href="javascript:toggleInfo('luca2014stiction','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>Proceedings of Robotics: Science and Systems&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_luca2014stiction" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{luca2014stiction,
+  author = {Luca Fiorio, Francesco Romano, Alberto Parmiggiani, Giulio Sandini, Francesco Nori},
+  title = {Stiction compensation in agonist-antagonist variable stiffness actuators},
+  booktitle = {Proceedings of Robotics: Science and Systems},
+  year = {2014}
+}
+</pre></td>
+</tr>
+<tr id="luca2014stiction" class="entry">
+	<td>Luca Fiorio Francesco Romano, A.P.G.S.F.N.</td>
+	<td>Stiction compensation in agonist-antagonist variable stiffness actuators <p class="infolinks">[<a href="javascript:toggleInfo('luca2014stiction','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>Proceedings of Robotics: Science and Systems&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_luca2014stiction" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{luca2014stiction,
+  author = {Luca Fiorio, Francesco Romano, Alberto Parmiggiani, Giulio Sandini, Francesco Nori},
+  title = {Stiction compensation in agonist-antagonist variable stiffness actuators},
+  booktitle = {Proceedings of Robotics: Science and Systems},
+  year = {2014}
+}
+</pre></td>
+</tr>
+<tr id="luca2014stiction" class="entry">
+	<td>Luca Fiorio Francesco Romano, A.P.G.S.F.N.</td>
+	<td>Stiction compensation in agonist-antagonist variable stiffness actuators <p class="infolinks">[<a href="javascript:toggleInfo('luca2014stiction','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>Proceedings of Robotics: Science and Systems&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_luca2014stiction" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{luca2014stiction,
+  author = {Luca Fiorio, Francesco Romano, Alberto Parmiggiani, Giulio Sandini, Francesco Nori},
+  title = {Stiction compensation in agonist-antagonist variable stiffness actuators},
+  booktitle = {Proceedings of Robotics: Science and Systems},
+  year = {2014}
+}
+</pre></td>
+</tr>
+<tr id="luca2014stiction" class="entry">
+	<td>Luca Fiorio Francesco Romano, A.P.G.S.F.N.</td>
+	<td>Stiction compensation in agonist-antagonist variable stiffness actuators <p class="infolinks">[<a href="javascript:toggleInfo('luca2014stiction','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>Proceedings of Robotics: Science and Systems&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_luca2014stiction" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{luca2014stiction,
+  author = {Luca Fiorio, Francesco Romano, Alberto Parmiggiani, Giulio Sandini, Francesco Nori},
+  title = {Stiction compensation in agonist-antagonist variable stiffness actuators},
+  booktitle = {Proceedings of Robotics: Science and Systems},
+  year = {2014}
 }
 </pre></td>
 </tr>
@@ -991,10 +1555,10 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </pre></td>
 </tr>
 <tr id="palinko2014communicative" class="entry">
-	<td>Palinko, O., Sciutti, A., Patane, L., Rea, F., Nori, F. and Sandini, G.</td>
+	<td>Palinko, O., Sciutti, A., Patan&eacute;, L., Rea, F., Nori, F. and Sandini, G.</td>
 	<td>Communicative lifting actions in human-humanoid interaction <p class="infolinks">[<a href="javascript:toggleInfo('palinko2014communicative','bibtex')">BibTeX</a>]</p></td>
 	<td>2014</td>
-	<td>Humanoid Robots (Humanoids), 2014 14th IEEE-RAS International Conference on, pp. 1116-1121&nbsp;</td>
+	<td>2014 IEEE-RAS International Conference on Humanoid Robots, pp. 1116-1121&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1002,31 +1566,11 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{palinko2014communicative,
-  author = {Palinko, Oskar and Sciutti, Alessandra and Patane, Laura and Rea, Francesco and Nori, Francesco and Sandini, Giulio},
+  author = {Palinko, Oskar and Sciutti, Alessandra and Patan&eacute;, Laura and Rea, Francesco and Nori, Francesco and Sandini, Giulio},
   title = {Communicative lifting actions in human-humanoid interaction},
-  booktitle = {Humanoid Robots (Humanoids), 2014 14th IEEE-RAS International Conference on},
+  booktitle = {2014 IEEE-RAS International Conference on Humanoid Robots},
   year = {2014},
   pages = {1116--1121}
-}
-</pre></td>
-</tr>
-<tr id="romano2014control" class="entry">
-	<td>Romano, F., Fiorio, L., Sandini, G. and Nori, F.</td>
-	<td>Control of a two-DOF manipulator equipped with a pnr-Variable Stiffness Actuator <p class="infolinks">[<a href="javascript:toggleInfo('romano2014control','bibtex')">BibTeX</a>]</p></td>
-	<td>2014</td>
-	<td>Intelligent Control (ISIC), 2014 IEEE International Symposium on, pp. 1354-1359&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_romano2014control" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{romano2014control,
-  author = {Romano, Francesco and Fiorio, Luca and Sandini, Giulio and Nori, Franco},
-  title = {Control of a two-DOF manipulator equipped with a pnr-Variable Stiffness Actuator},
-  booktitle = {Intelligent Control (ISIC), 2014 IEEE International Symposium on},
-  year = {2014},
-  pages = {1354--1359}
 }
 </pre></td>
 </tr>
@@ -1046,6 +1590,26 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
   title = {Collocated Adaptive Control of Underactuated Mechanical Systems},
   journal = {arXiv preprint arXiv:1405.5005},
   year = {2014}
+}
+</pre></td>
+</tr>
+<tr id="romano2014control" class="entry">
+	<td>Romano, F., Fiorio, L., Sandini, G. and Nori, F.</td>
+	<td>Control of a two-DoF manipulator equipped with a pnr-variable stiffness actuator <p class="infolinks">[<a href="javascript:toggleInfo('romano2014control','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>2014 IEEE International Symposium on Intelligent Control (ISIC), pp. 1354-1359&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_romano2014control" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{romano2014control,
+  author = {Romano, Francesco and Fiorio, Luca and Sandini, Giulio and Nori, Francesco},
+  title = {Control of a two-DoF manipulator equipped with a pnr-variable stiffness actuator},
+  booktitle = {2014 IEEE International Symposium on Intelligent Control (ISIC)},
+  year = {2014},
+  pages = {1354--1359}
 }
 </pre></td>
 </tr>
@@ -1069,34 +1633,11 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
-<tr id="sciutti2014understanding" class="entry">
-	<td>Sciutti, A., Patane, L., Nori, F. and Sandini, G.</td>
-	<td>Understanding object weight from human and humanoid lifting actions <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2014understanding','bibtex')">BibTeX</a>]</p></td>
-	<td>2014</td>
-	<td>Autonomous Mental Development, IEEE Transactions on<br/>Vol. 6(2), pp. 80-92&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_sciutti2014understanding" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{sciutti2014understanding,
-  author = {Sciutti, Alessandra and Patane, Laura and Nori, Franco and Sandini, Giulio},
-  title = {Understanding object weight from human and humanoid lifting actions},
-  journal = {Autonomous Mental Development, IEEE Transactions on},
-  publisher = {IEEE},
-  year = {2014},
-  volume = {6},
-  number = {2},
-  pages = {80--92}
-}
-</pre></td>
-</tr>
 <tr id="sciutti2014developmental" class="entry">
-	<td>Sciutti, A., Patane, L., Palinko, O., Nori, F. and Sandini, G.</td>
+	<td>Sciutti, A., Patan&egrave;, L., Palinko, O., Nori, F. and Sandini, G.</td>
 	<td>Developmental changes in children understanding robotic actions: The case of lifting <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2014developmental','bibtex')">BibTeX</a>]</p></td>
 	<td>2014</td>
-	<td>Development and Learning and Epigenetic Robotics (ICDL-Epirob), 2014 Joint IEEE International Conferences on, pp. 331-336&nbsp;</td>
+	<td>4th International Conference on Development and Learning and on Epigenetic Robotics, pp. 331-336&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1104,11 +1645,34 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{sciutti2014developmental,
-  author = {Sciutti, Alessandra and Patane, Laura and Palinko, Oskar and Nori, Franco and Sandini, Giulio},
+  author = {Sciutti, Alessandra and Patan&egrave;, Laura and Palinko, Oskar and Nori, Francesco and Sandini, Giulio},
   title = {Developmental changes in children understanding robotic actions: The case of lifting},
-  booktitle = {Development and Learning and Epigenetic Robotics (ICDL-Epirob), 2014 Joint IEEE International Conferences on},
+  booktitle = {4th International Conference on Development and Learning and on Epigenetic Robotics},
   year = {2014},
   pages = {331--336}
+}
+</pre></td>
+</tr>
+<tr id="sciutti2014understanding" class="entry">
+	<td>Sciutti, A., Patane, L., Nori, F. and Sandini, G.</td>
+	<td>Understanding object weight from human and humanoid lifting actions <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2014understanding','bibtex')">BibTeX</a>]</p></td>
+	<td>2014</td>
+	<td>IEEE Transactions on Autonomous Mental Development<br/>Vol. 6(2), pp. 80-92&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_sciutti2014understanding" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{sciutti2014understanding,
+  author = {Sciutti, Alessandra and Patane, Laura and Nori, Francesco and Sandini, Giulio},
+  title = {Understanding object weight from human and humanoid lifting actions},
+  journal = {IEEE Transactions on Autonomous Mental Development},
+  publisher = {IEEE},
+  year = {2014},
+  volume = {6},
+  number = {2},
+  pages = {80--92}
 }
 </pre></td>
 </tr>
@@ -1138,7 +1702,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Alessandro, C., Delis, I., Nori, F., Panzeri, S. and Berret, B.</td>
 	<td>Muscle synergies in neuroscience and robotics: from input-space to task-space perspectives <p class="infolinks">[<a href="javascript:toggleInfo('alessandro2013muscle','bibtex')">BibTeX</a>]</p></td>
 	<td>2013</td>
-	<td>Frontiers in computational neuroscience<br/>Vol. 7(Art 43), pp. 1-16&nbsp;</td>
+	<td>Frontiers in computational neuroscience<br/>Vol. 7, pp. 43&nbsp;</td>
 	<td>article</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1149,19 +1713,18 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
   author = {Alessandro, Cristiano and Delis, Ioannis and Nori, Francesco and Panzeri, Stefano and Berret, Bastien},
   title = {Muscle synergies in neuroscience and robotics: from input-space to task-space perspectives},
   journal = {Frontiers in computational neuroscience},
-  publisher = {Frontiers Research Foundation},
+  publisher = {Frontiers},
   year = {2013},
   volume = {7},
-  number = {Art 43},
-  pages = {1--16}
+  pages = {43}
 }
 </pre></td>
 </tr>
 <tr id="berret2013open" class="entry">
 	<td>Berret, B., Yung, I. and Nori, F.</td>
-	<td>Open-loop stochastic optimal control of a passive noise-rejection variable stiffness actuator: Application to unstable tasks <p class="infolinks">[<a href="javascript:toggleInfo('berret2013open','bibtex')">BibTeX</a>]</p></td>
+	<td>Open-loop stochastic optimal control of a passive noise-rejection variable stiffness actuator: application to unstable tasks <p class="infolinks">[<a href="javascript:toggleInfo('berret2013open','bibtex')">BibTeX</a>]</p></td>
 	<td>2013</td>
-	<td>Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ International Conference on, pp. 3029-3034&nbsp;</td>
+	<td>2013 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 3029-3034&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1169,9 +1732,9 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{berret2013open,
-  author = {Berret, Bastien and Yung, I and Nori, Franco},
-  title = {Open-loop stochastic optimal control of a passive noise-rejection variable stiffness actuator: Application to unstable tasks},
-  booktitle = {Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ International Conference on},
+  author = {Berret, Bastien and Yung, I and Nori, Francesco},
+  title = {Open-loop stochastic optimal control of a passive noise-rejection variable stiffness actuator: application to unstable tasks},
+  booktitle = {2013 IEEE/RSJ International Conference on Intelligent Robots and Systems},
   year = {2013},
   pages = {3029--3034}
 }
@@ -1200,7 +1763,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Fiorio, L., Romano, F., Parmiggiani, A., Sandini, G. and Nori, F.</td>
 	<td>On the effects of internal stiction in pnrVIA actuators <p class="infolinks">[<a href="javascript:toggleInfo('fiorio2013effects','bibtex')">BibTeX</a>]</p></td>
 	<td>2013</td>
-	<td>Humanoid Robots (Humanoids), 2013 13th IEEE-RAS International Conference on, pp. 362-367&nbsp;</td>
+	<td>2013 13th IEEE-RAS International Conference on Humanoid Robots (Humanoids), pp. 362-367&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1210,7 +1773,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{fiorio2013effects,
   author = {Fiorio, Luca and Romano, Francesco and Parmiggiani, Alberto and Sandini, Giulio and Nori, Francesco},
   title = {On the effects of internal stiction in pnrVIA actuators},
-  booktitle = {Humanoid Robots (Humanoids), 2013 13th IEEE-RAS International Conference on},
+  booktitle = {2013 13th IEEE-RAS International Conference on Humanoid Robots (Humanoids)},
   year = {2013},
   pages = {362--367}
 }
@@ -1218,7 +1781,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </tr>
 <tr id="natale2013icub" class="entry">
 	<td>Natale, L., Nori, F., Metta, G., Fumagalli, M., Ivaldi, S., Pattacini, U., Randazzo, M., Schmitz, A. and Sandini, G.</td>
-	<td>The icub platform: a tool for studying intrinsically motivated learning <p class="infolinks">[<a href="javascript:toggleInfo('natale2013icub','bibtex')">BibTeX</a>]</p></td>
+	<td>The iCub platform: a tool for studying intrinsically motivated learning <p class="infolinks">[<a href="javascript:toggleInfo('natale2013icub','bibtex')">BibTeX</a>]</p></td>
 	<td>2013</td>
 	<td>Intrinsically motivated learning in natural and artificial systems, pp. 433-458&nbsp;</td>
 	<td>incollection</td>
@@ -1229,7 +1792,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <pre>
 @incollection{natale2013icub,
   author = {Natale, Lorenzo and Nori, Francesco and Metta, Giorgio and Fumagalli, Matteo and Ivaldi, Serena and Pattacini, Ugo and Randazzo, Marco and Schmitz, Alexander and Sandini, Giulio},
-  title = {The icub platform: a tool for studying intrinsically motivated learning},
+  title = {The iCub platform: a tool for studying intrinsically motivated learning},
   booktitle = {Intrinsically motivated learning in natural and artificial systems},
   publisher = {Springer Berlin Heidelberg},
   year = {2013},
@@ -1241,7 +1804,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Nori, F., Sandini, G. and Metta, G.</td>
 	<td>Model of cyclotorsion in a Tendon Driven Eyeball: theoretical model and qualitative evaluation on a robotic platform <p class="infolinks">[<a href="javascript:toggleInfo('nori2013model','bibtex')">BibTeX</a>]</p></td>
 	<td>2013</td>
-	<td>Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ International Conference on, pp. 5981-5987&nbsp;</td>
+	<td>2013 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 5981-5987&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1249,11 +1812,31 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{nori2013model,
-  author = {Nori, Franco and Sandini, Giulio and Metta, Giorgio},
+  author = {Nori, Francesco and Sandini, Giulio and Metta, Giorgio},
   title = {Model of cyclotorsion in a Tendon Driven Eyeball: theoretical model and qualitative evaluation on a robotic platform},
-  booktitle = {Intelligent Robots and Systems (IROS), 2013 IEEE/RSJ International Conference on},
+  booktitle = {2013 IEEE/RSJ International Conference on Intelligent Robots and Systems},
   year = {2013},
   pages = {5981--5987}
+}
+</pre></td>
+</tr>
+<tr id="sciutti2013humans" class="entry">
+	<td>Sciutti, A., Patan&egrave;, L., Nori, F. and Sandini, G.</td>
+	<td>Do humans need learning to read humanoid lifting actions? <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2013humans','bibtex')">BibTeX</a>]</p></td>
+	<td>2013</td>
+	<td>2013 IEEE Third Joint International Conference on Development and Learning and Epigenetic Robotics (ICDL), pp. 1-6&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_sciutti2013humans" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{sciutti2013humans,
+  author = {Sciutti, Alessandra and Patan&egrave;, Laura and Nori, Francesco and Sandini, Giulio},
+  title = {Do humans need learning to read humanoid lifting actions?},
+  booktitle = {2013 IEEE Third Joint International Conference on Development and Learning and Epigenetic Robotics (ICDL)},
+  year = {2013},
+  pages = {1--6}
 }
 </pre></td>
 </tr>
@@ -1280,31 +1863,11 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
-<tr id="sciutti2013humans" class="entry">
-	<td>Sciutti, A., Patane, L., Nori, F. and Sandini, G.</td>
-	<td>Do humans need learning to read humanoid lifting actions? <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2013humans','bibtex')">BibTeX</a>]</p></td>
-	<td>2013</td>
-	<td>Development and Learning and Epigenetic Robotics (ICDL), 2013 IEEE Third Joint International Conference on, pp. 1-6&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_sciutti2013humans" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{sciutti2013humans,
-  author = {Sciutti, Alessandra and Patane, Laura and Nori, Franco and Sandini, Giulio},
-  title = {Do humans need learning to read humanoid lifting actions?},
-  booktitle = {Development and Learning and Epigenetic Robotics (ICDL), 2013 IEEE Third Joint International Conference on},
-  year = {2013},
-  pages = {1--6}
-}
-</pre></td>
-</tr>
 <tr id="traversaro2013inertial" class="entry">
 	<td>Traversaro, S., Del Prete, A., Muradore, R., Natale, L. and Nori, F.</td>
 	<td>Inertial parameter identification including friction and motor dynamics <p class="infolinks">[<a href="javascript:toggleInfo('traversaro2013inertial','bibtex')">BibTeX</a>]</p></td>
 	<td>2013</td>
-	<td>Humanoid Robots (Humanoids), 2013 13th IEEE-RAS International Conference on, pp. 68-73&nbsp;</td>
+	<td>2013 13th IEEE-RAS International Conference on Humanoid Robots (Humanoids), pp. 68-73&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1314,7 +1877,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{traversaro2013inertial,
   author = {Traversaro, Silvio and Del Prete, Andrea and Muradore, Riccardo and Natale, Lorenzo and Nori, Francesco},
   title = {Inertial parameter identification including friction and motor dynamics},
-  booktitle = {Humanoid Robots (Humanoids), 2013 13th IEEE-RAS International Conference on},
+  booktitle = {2013 13th IEEE-RAS International Conference on Humanoid Robots (Humanoids)},
   year = {2013},
   pages = {68--73}
 }
@@ -1324,7 +1887,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Alessandro, C. and Nori, F.</td>
 	<td>Identification of synergies by optimization of trajectory tracking tasks <p class="infolinks">[<a href="javascript:toggleInfo('alessandro2012identification','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
-	<td>Biomedical Robotics and Biomechatronics (BioRob), 2012 4th IEEE RAS &amp; EMBS International Conference on, pp. 924-930&nbsp;</td>
+	<td>2012 4th IEEE RAS &amp; EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob), pp. 924-930&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1334,7 +1897,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{alessandro2012identification,
   author = {Alessandro, Cristiano and Nori, Francesco},
   title = {Identification of synergies by optimization of trajectory tracking tasks},
-  booktitle = {Biomedical Robotics and Biomechatronics (BioRob), 2012 4th IEEE RAS &amp; EMBS International Conference on},
+  booktitle = {2012 4th IEEE RAS &amp; EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob)},
   year = {2012},
   pages = {924--930}
 }
@@ -1344,7 +1907,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Berret, B., Sandini, G. and Nori, F.</td>
 	<td>Design principles for muscle-like variable impedance actuators with noise rejection property via co-contraction <p class="infolinks">[<a href="javascript:toggleInfo('berret2012design','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
-	<td>Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on, pp. 222-227&nbsp;</td>
+	<td>2012 12th IEEE-RAS International Conference on Humanoid Robots (Humanoids 2012), pp. 222-227&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1352,9 +1915,9 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{berret2012design,
-  author = {Berret, Bastien and Sandini, Giulio and Nori, Franco},
+  author = {Berret, Bastien and Sandini, Giulio and Nori, Francesco},
   title = {Design principles for muscle-like variable impedance actuators with noise rejection property via co-contraction},
-  booktitle = {Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on},
+  booktitle = {2012 12th IEEE-RAS International Conference on Humanoid Robots (Humanoids 2012)},
   year = {2012},
   pages = {222--227}
 }
@@ -1364,20 +1927,40 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Del Prete, A., Natale, L., Nori, F. and Metta, G.</td>
 	<td>Contact force estimations using tactile sensors and force/torque sensors <p class="infolinks">[<a href="javascript:toggleInfo('del2012contact','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
-	<td>Human Robot Interaction<br/>Vol. 2012, pp. 0-2&nbsp;</td>
-	<td>article</td>
+	<td><br/>Vol. 2012Human Robot Interaction, pp. 0-2&nbsp;</td>
+	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_del2012contact" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@article{del2012contact,
+@inproceedings{del2012contact,
   author = {Del Prete, Andrea and Natale, Lorenzo and Nori, Francesco and Metta, Giorgio},
   title = {Contact force estimations using tactile sensors and force/torque sensors},
-  journal = {Human Robot Interaction},
+  booktitle = {Human Robot Interaction},
   year = {2012},
   volume = {2012},
   pages = {0--2}
+}
+</pre></td>
+</tr>
+<tr id="del2012control" class="entry">
+	<td>Del Prete, A., Nori, F., Metta, G. and Natale, L.</td>
+	<td>Control of contact forces: The role of tactile feedback for contact localization <p class="infolinks">[<a href="javascript:toggleInfo('del2012control','bibtex')">BibTeX</a>]</p></td>
+	<td>2012</td>
+	<td>2012 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 4048-4053&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_del2012control" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{del2012control,
+  author = {Del Prete, Andrea and Nori, Francesco and Metta, Giorgio and Natale, Lorenzo},
+  title = {Control of contact forces: The role of tactile feedback for contact localization},
+  booktitle = {2012 IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year = {2012},
+  pages = {4048--4053}
 }
 </pre></td>
 </tr>
@@ -1385,7 +1968,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Fiorio, L., Parmiggiani, A., Berret, B., Sandini, G. and Nori, F.</td>
 	<td>pnrVSA: human-like actuator with non-linear springs in agonist-antagonist configuration <p class="infolinks">[<a href="javascript:toggleInfo('fiorio2012pnrvsa','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
-	<td>Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on, pp. 502-507&nbsp;</td>
+	<td>2012 12th IEEE-RAS International Conference on Humanoid Robots (Humanoids 2012), pp. 502-507&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1393,9 +1976,9 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{fiorio2012pnrvsa,
-  author = {Fiorio, Luca and Parmiggiani, Alberto and Berret, Bastien and Sandini, Giulio and Nori, Franco},
+  author = {Fiorio, Luca and Parmiggiani, Alberto and Berret, Bastien and Sandini, Giulio and Nori, Francesco},
   title = {pnrVSA: human-like actuator with non-linear springs in agonist-antagonist configuration},
-  booktitle = {Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on},
+  booktitle = {2012 12th IEEE-RAS International Conference on Humanoid Robots (Humanoids 2012)},
   year = {2012},
   pages = {502--507}
 }
@@ -1428,7 +2011,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Gori, I., Pattacini, U., Nori, F., Metta, G. and Sandini, G.</td>
 	<td>DForC: a real-time method for reaching, tracking and obstacle avoidance in humanoid robots <p class="infolinks">[<a href="javascript:toggleInfo('gori2012dforc','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
-	<td>Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on, pp. 544-551&nbsp;</td>
+	<td>2012 12th IEEE-RAS International Conference on Humanoid Robots (Humanoids 2012), pp. 544-551&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1436,9 +2019,9 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @inproceedings{gori2012dforc,
-  author = {Gori, Ilaria and Pattacini, Ugo and Nori, Franco and Metta, Giorgio and Sandini, Giulio},
+  author = {Gori, Ilaria and Pattacini, Ugo and Nori, Francesco and Metta, Giorgio and Sandini, Giulio},
   title = {DForC: a real-time method for reaching, tracking and obstacle avoidance in humanoid robots},
-  booktitle = {Humanoid Robots (Humanoids), 2012 12th IEEE-RAS International Conference on},
+  booktitle = {2012 12th IEEE-RAS International Conference on Humanoid Robots (Humanoids 2012)},
   year = {2012},
   pages = {544--551}
 }
@@ -1446,7 +2029,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </tr>
 <tr id="ivaldi2012humans" class="entry">
 	<td>Ivaldi, S., Sigaud, O., Berret, B. and Nori, F.</td>
-	<td>From humans to humanoids: The optimal control framework <p class="infolinks">[<a href="javascript:toggleInfo('ivaldi2012humans','bibtex')">BibTeX</a>]</p></td>
+	<td>From humans to humanoids: the optimal control framework <p class="infolinks">[<a href="javascript:toggleInfo('ivaldi2012humans','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
 	<td>Paladyn<br/>Vol. 3(2), pp. 75-91&nbsp;</td>
 	<td>article</td>
@@ -1457,7 +2040,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <pre>
 @article{ivaldi2012humans,
   author = {Ivaldi, Serena and Sigaud, Olivier and Berret, Bastien and Nori, Francesco},
-  title = {From humans to humanoids: The optimal control framework},
+  title = {From humans to humanoids: the optimal control framework},
   journal = {Paladyn},
   publisher = {SP Versita},
   year = {2012},
@@ -1495,13 +2078,13 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Intrinsically motivated learning in natural and artificial systems <p class="infolinks">[<a href="javascript:toggleInfo('natale2012intrinsically','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
 	<td>&nbsp;</td>
-	<td>book</td>
+	<td>misc</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_natale2012intrinsically" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@book{natale2012intrinsically,
+@misc{natale2012intrinsically,
   author = {Natale, L and Nori, F and Metta, G and Fumagalli, M and Ivaldi, S and Pattacini, U and Randazzo, M and Schmitz, A and Sandini, GG},
   title = {Intrinsically motivated learning in natural and artificial systems},
   publisher = {Springer-Verlag},
@@ -1511,20 +2094,23 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 </tr>
 <tr id="nori2012control" class="entry">
 	<td>Nori, F., Berret, B., Fiorio, L., Parmiggiani, A. and Sandini, G.</td>
-	<td>Control of a Single Degree of Freedom Noise Rejecting-Variable Impedance Actuator. <p class="infolinks">[<a href="javascript:toggleInfo('nori2012control','bibtex')">BibTeX</a>]</p></td>
+	<td>Control of a single Degree of Freedom Noise Rejecting-Variable Impedance Actuator <p class="infolinks">[<a href="javascript:toggleInfo('nori2012control','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
-	<td>SyRoCo, pp. 473-478&nbsp;</td>
-	<td>inproceedings</td>
+	<td>IFAC Proceedings Volumes<br/>Vol. 45(22), pp. 473-478&nbsp;</td>
+	<td>article</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_nori2012control" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@inproceedings{nori2012control,
+@article{nori2012control,
   author = {Nori, Francesco and Berret, Bastien and Fiorio, Luca and Parmiggiani, Alberto and Sandini, Giulio},
-  title = {Control of a Single Degree of Freedom Noise Rejecting-Variable Impedance Actuator.},
-  booktitle = {SyRoCo},
+  title = {Control of a single Degree of Freedom Noise Rejecting-Variable Impedance Actuator},
+  journal = {IFAC Proceedings Volumes},
+  publisher = {Elsevier},
   year = {2012},
+  volume = {45},
+  number = {22},
   pages = {473--478}
 }
 </pre></td>
@@ -1541,7 +2127,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <td colspan="6"><b>BibTeX</b>:
 <pre>
 @article{parmiggiani2012design,
-  author = {Parmiggiani, Alberto and Maggiali, Marco and Natale, Lorenzo and Nori, Francesco and Schmitz, Alexander and Tsagarakis, Nikos and Victor, Jose Santos and Becchi, Francesco and Sandini, Giulio and Metta, Giorgio},
+  author = {Parmiggiani, Alberto and Maggiali, Marco and Natale, Lorenzo and Nori, Francesco and Schmitz, Alexander and Tsagarakis, Nikos and Victor, Jos&eacute; Santos and Becchi, Francesco and Sandini, Giulio and Metta, Giorgio},
   title = {The design of the iCub humanoid robot},
   journal = {International journal of humanoid robotics},
   publisher = {World Scientific Publishing Company},
@@ -1556,7 +2142,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Patane, L., Sciutti, A., Berret, B., Squeri, V., Masia, L., Sandini, G. and Nori, F.</td>
 	<td>Modeling kinematic forward model adaptation by modular decomposition <p class="infolinks">[<a href="javascript:toggleInfo('patane2012modeling','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
-	<td>Biomedical Robotics and Biomechatronics (BioRob), 2012 4th IEEE RAS &amp; EMBS International Conference on, pp. 1252-1257&nbsp;</td>
+	<td>2012 4th IEEE RAS &amp; EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob), pp. 1252-1257&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1566,29 +2152,28 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{patane2012modeling,
   author = {Patane, Laura and Sciutti, Alessandra and Berret, Bastien and Squeri, Valentina and Masia, Lorenzo and Sandini, Giulio and Nori, Francesco},
   title = {Modeling kinematic forward model adaptation by modular decomposition},
-  booktitle = {Biomedical Robotics and Biomechatronics (BioRob), 2012 4th IEEE RAS &amp; EMBS International Conference on},
+  booktitle = {2012 4th IEEE RAS &amp; EMBS International Conference on Biomedical Robotics and Biomechatronics (BioRob)},
   year = {2012},
   pages = {1252--1257}
 }
 </pre></td>
 </tr>
-<tr id="prete2012control" class="entry">
-	<td>Prete, A.D., Nori, F., Metta, G. and Natale, L.</td>
-	<td>Control of contact forces: The role of tactile feedback for contact localization <p class="infolinks">[<a href="javascript:toggleInfo('prete2012control','bibtex')">BibTeX</a>]</p></td>
+<tr id="sciutti2012anticipatory" class="entry">
+	<td>Sciutti, A., Bisio, A., Nori, F., Metta, G., Fadiga, L. and Sandini, G.</td>
+	<td>Anticipatory gaze in human-robot interactions <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2012anticipatory','bibtex')">BibTeX</a>]</p></td>
 	<td>2012</td>
-	<td>Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on, pp. 4048-4053&nbsp;</td>
+	<td>Gaze in HRI from modeling to communication” workshop at the 7th ACM/IEEE international conference on human-robot interaction, Boston, Massachusetts, USA&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
-<tr id="bib_prete2012control" class="bibtex noshow">
+<tr id="bib_sciutti2012anticipatory" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@inproceedings{prete2012control,
-  author = {Prete, Andrea Del and Nori, Francesco and Metta, Giorgio and Natale, Lorenzo},
-  title = {Control of contact forces: The role of tactile feedback for contact localization},
-  booktitle = {Intelligent Robots and Systems (IROS), 2012 IEEE/RSJ International Conference on},
-  year = {2012},
-  pages = {4048--4053}
+@inproceedings{sciutti2012anticipatory,
+  author = {Sciutti, Alessandra and Bisio, Ambra and Nori, Francesco and Metta, Giorgio and Fadiga, Luciano and Sandini, Giulio},
+  title = {Anticipatory gaze in human-robot interactions},
+  booktitle = {Gaze in HRI from modeling to communication” workshop at the 7th ACM/IEEE international conference on human-robot interaction, Boston, Massachusetts, USA},
+  year = {2012}
 }
 </pre></td>
 </tr>
@@ -1615,25 +2200,6 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
-<tr id="sciutti2012anticipatory" class="entry">
-	<td>Sciutti, A., Bisio, A., Nori, F., Metta, G., Fadiga, L. and Sandini, G.</td>
-	<td>Anticipatory gaze in human-robot interactions <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2012anticipatory','bibtex')">BibTeX</a>]</p></td>
-	<td>2012</td>
-	<td>Gaze in HRI from modeling to communication'' workshop at the 7th ACM/IEEE international conference on human-robot interaction, Boston, Massachusetts, USA&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_sciutti2012anticipatory" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{sciutti2012anticipatory,
-  author = {Sciutti, Alessandra and Bisio, Ambra and Nori, Francesco and Metta, Giorgio and Fadiga, Luciano and Sandini, Giulio},
-  title = {Anticipatory gaze in human-robot interactions},
-  journal = {Gaze in HRI from modeling to communication'' workshop at the 7th ACM/IEEE international conference on human-robot interaction, Boston, Massachusetts, USA},
-  year = {2012}
-}
-</pre></td>
-</tr>
 <tr id="berret2011evidence" class="entry">
 	<td>Berret, B., Chiovetto, E., Nori, F. and Pozzo, T.</td>
 	<td>Evidence for composite cost functions in arm movement planning: an inverse optimal control approach <p class="infolinks">[<a href="javascript:toggleInfo('berret2011evidence','bibtex')">BibTeX</a>]</p></td>
@@ -1657,34 +2223,11 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
-<tr id="berret2011manifold" class="entry">
-	<td>Berret, B., Chiovetto, E., Nori, F. and Pozzo, T.</td>
-	<td>Manifold reaching paradigm: how do we handle target redundancy? <p class="infolinks">[<a href="javascript:toggleInfo('berret2011manifold','bibtex')">BibTeX</a>]</p></td>
-	<td>2011</td>
-	<td>Journal of neurophysiology<br/>Vol. 106(4), pp. 2086-2102&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_berret2011manifold" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{berret2011manifold,
-  author = {Berret, Bastien and Chiovetto, Enrico and Nori, Francesco and Pozzo, Thierry},
-  title = {Manifold reaching paradigm: how do we handle target redundancy?},
-  journal = {Journal of neurophysiology},
-  publisher = {American Physiological Society},
-  year = {2011},
-  volume = {106},
-  number = {4},
-  pages = {2086--2102}
-}
-</pre></td>
-</tr>
 <tr id="berret2011stochastic" class="entry">
 	<td>Berret, B., Ivaldi, S., Nori, F. and Sandini, G.</td>
 	<td>Stochastic optimal control with variable impedance manipulators in presence of uncertainties and delayed feedback <p class="infolinks">[<a href="javascript:toggleInfo('berret2011stochastic','bibtex')">BibTeX</a>]</p></td>
 	<td>2011</td>
-	<td>Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on, pp. 4354-4359&nbsp;</td>
+	<td>2011 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 4354-4359&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1694,7 +2237,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{berret2011stochastic,
   author = {Berret, Bastien and Ivaldi, Serena and Nori, Francesco and Sandini, Giulio},
   title = {Stochastic optimal control with variable impedance manipulators in presence of uncertainties and delayed feedback},
-  booktitle = {Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on},
+  booktitle = {2011 IEEE/RSJ International Conference on Intelligent Robots and Systems},
   year = {2011},
   pages = {4354--4359}
 }
@@ -1704,7 +2247,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Ciliberto, C., Pattacini, U., Natale, L., Nori, F. and Metta, G.</td>
 	<td>Reexamining lucas-kanade method for real-time independent motion detection: Application to the icub humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('ciliberto2011reexamining','bibtex')">BibTeX</a>]</p></td>
 	<td>2011</td>
-	<td>Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on, pp. 4154-4160&nbsp;</td>
+	<td>2011 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 4154-4160&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1714,9 +2257,29 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{ciliberto2011reexamining,
   author = {Ciliberto, Carlo and Pattacini, Ugo and Natale, Lorenzo and Nori, Francesco and Metta, Giorgio},
   title = {Reexamining lucas-kanade method for real-time independent motion detection: Application to the icub humanoid robot},
-  booktitle = {Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on},
+  booktitle = {2011 IEEE/RSJ International Conference on Intelligent Robots and Systems},
   year = {2011},
   pages = {4154--4160}
+}
+</pre></td>
+</tr>
+<tr id="del2011skin" class="entry">
+	<td>Del Prete, A., Denei, S., Natale, L., Mastrogiovanni, F., Nori, F., Cannata, G. and Metta, G.</td>
+	<td>Skin spatial calibration using force/torque measurements <p class="infolinks">[<a href="javascript:toggleInfo('del2011skin','bibtex')">BibTeX</a>]</p></td>
+	<td>2011</td>
+	<td>2011 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 3694-3700&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_del2011skin" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{del2011skin,
+  author = {Del Prete, Andrea and Denei, Simone and Natale, Lorenzo and Mastrogiovanni, Fulvio and Nori, Francesco and Cannata, Giorgio and Metta, Giorgio},
+  title = {Skin spatial calibration using force/torque measurements},
+  booktitle = {2011 IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year = {2011},
+  pages = {3694--3700}
 }
 </pre></td>
 </tr>
@@ -1768,16 +2331,16 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Force control and reaching movements on the ICUB humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('metta2011force','bibtex')">BibTeX</a>]</p></td>
 	<td>2011</td>
 	<td>Proceedings of 15th International Symposium on Robotics Research&nbsp;</td>
-	<td>article</td>
+	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_metta2011force" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@article{metta2011force,
+@inproceedings{metta2011force,
   author = {Metta, Giorgio and Natale, Lorenzo and Nori, Francesco and Sandini, Giulio},
   title = {Force control and reaching movements on the ICUB humanoid robot},
-  journal = {Proceedings of 15th International Symposium on Robotics Research},
+  booktitle = {Proceedings of 15th International Symposium on Robotics Research},
   year = {2011}
 }
 </pre></td>
@@ -1802,31 +2365,11 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
-<tr id="prete2011skin" class="entry">
-	<td>Prete, A.D., Denei, S., Natale, L., Mastrogiovanni, F., Nori, F., Cannata, G. and Metta, G.</td>
-	<td>Skin spatial calibration using force/torque measurements <p class="infolinks">[<a href="javascript:toggleInfo('prete2011skin','bibtex')">BibTeX</a>]</p></td>
-	<td>2011</td>
-	<td>Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on, pp. 3694-3700&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_prete2011skin" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{prete2011skin,
-  author = {Prete, Andrea Del and Denei, Simone and Natale, Lorenzo and Mastrogiovanni, Fulvio and Nori, Francesco and Cannata, Giorgio and Metta, Giorgio},
-  title = {Skin spatial calibration using force/torque measurements},
-  booktitle = {Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on},
-  year = {2011},
-  pages = {3694--3700}
-}
-</pre></td>
-</tr>
 <tr id="randazzo2011comparison" class="entry">
 	<td>Randazzo, M., Fumagalli, M., Nori, F., Natale, L., Metta, G. and Sandini, G.</td>
 	<td>A comparison between joint level torque sensing and proximal F/T sensor torque estimation: implementation on the iCub <p class="infolinks">[<a href="javascript:toggleInfo('randazzo2011comparison','bibtex')">BibTeX</a>]</p></td>
 	<td>2011</td>
-	<td>Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on, pp. 4161-4167&nbsp;</td>
+	<td>2011 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 4161-4167&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1836,7 +2379,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{randazzo2011comparison,
   author = {Randazzo, Marco and Fumagalli, Matteo and Nori, Francesco and Natale, Lorenzo and Metta, Giorgio and Sandini, Giulio},
   title = {A comparison between joint level torque sensing and proximal F/T sensor torque estimation: implementation on the iCub},
-  booktitle = {Intelligent Robots and Systems (IROS), 2011 IEEE/RSJ International Conference on},
+  booktitle = {2011 IEEE/RSJ International Conference on Intelligent Robots and Systems},
   year = {2011},
   pages = {4161--4167}
 }
@@ -1867,7 +2410,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Cangelosi, A., Metta, G., Sagerer, G., Nolfi, S., Nehaniv, C., Fischer, K., Tani, J., Belpaeme, T., Sandini, G., Nori, F. and others</td>
 	<td>Integration of action and language knowledge: A roadmap for developmental robotics <p class="infolinks">[<a href="javascript:toggleInfo('cangelosi2010integration','bibtex')">BibTeX</a>]</p></td>
 	<td>2010</td>
-	<td>Autonomous Mental Development, IEEE Transactions on<br/>Vol. 2(3), pp. 167-195&nbsp;</td>
+	<td>IEEE Transactions on Autonomous Mental Development<br/>Vol. 2(3), pp. 167-195&nbsp;</td>
 	<td>article</td>
 	<td>&nbsp;</td>
 </tr>
@@ -1877,12 +2420,32 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @article{cangelosi2010integration,
   author = {Cangelosi, Angelo and Metta, Giorgio and Sagerer, Gerhard and Nolfi, Stefano and Nehaniv, Chrystopher and Fischer, Kerstin and Tani, Jun and Belpaeme, Tony and Sandini, Giulio and Nori, Francesco and others},
   title = {Integration of action and language knowledge: A roadmap for developmental robotics},
-  journal = {Autonomous Mental Development, IEEE Transactions on},
+  journal = {IEEE Transactions on Autonomous Mental Development},
   publisher = {IEEE},
   year = {2010},
   volume = {2},
   number = {3},
   pages = {167--195}
+}
+</pre></td>
+</tr>
+<tr id="fumagalli2010exploiting" class="entry">
+	<td>Fumagalli, M., Randazzo, M., Nori, F., Natale, L., Metta, G. and Sandini, G.</td>
+	<td>Exploiting proximal F/T measurements for the iCub active compliance <p class="infolinks">[<a href="javascript:toggleInfo('fumagalli2010exploiting','bibtex')">BibTeX</a>]</p></td>
+	<td>2010</td>
+	<td>Intelligent Robots and Systems (IROS), 2010 IEEE/RSJ International Conference on, pp. 1870-1876&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_fumagalli2010exploiting" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{fumagalli2010exploiting,
+  author = {Fumagalli, Matteo and Randazzo, Marco and Nori, Francesco and Natale, Lorenzo and Metta, Giorgio and Sandini, Giulio},
+  title = {Exploiting proximal F/T measurements for the iCub active compliance},
+  booktitle = {Intelligent Robots and Systems (IROS), 2010 IEEE/RSJ International Conference on},
+  year = {2010},
+  pages = {1870--1876}
 }
 </pre></td>
 </tr>
@@ -1904,26 +2467,6 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
   publisher = {Springer Berlin Heidelberg},
   year = {2010},
   pages = {149--167}
-}
-</pre></td>
-</tr>
-<tr id="fumagalli2010exploiting" class="entry">
-	<td>Fumagalli, M., Randazzo, M., Nori, F., Natale, L., Metta, G. and Sandini, G.</td>
-	<td>Exploiting proximal F/T measurements for the iCub active compliance <p class="infolinks">[<a href="javascript:toggleInfo('fumagalli2010exploiting','bibtex')">BibTeX</a>]</p></td>
-	<td>2010</td>
-	<td>Intelligent Robots and Systems (IROS), 2010 IEEE/RSJ International Conference on, pp. 1870-1876&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_fumagalli2010exploiting" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{fumagalli2010exploiting,
-  author = {Fumagalli, Matteo and Randazzo, Marco and Nori, Francesco and Natale, Lorenzo and Metta, Giorgio and Sandini, Giulio},
-  title = {Exploiting proximal F/T measurements for the iCub active compliance},
-  booktitle = {Intelligent Robots and Systems (IROS), 2010 IEEE/RSJ International Conference on},
-  year = {2010},
-  pages = {1870--1876}
 }
 </pre></td>
 </tr>
@@ -2009,26 +2552,6 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
-<tr id="lallee2010book" class="entry">
-	<td>Lallee, S., Yoshida, E., Mallet, A., Nori, F., Natale, L., Metta, G., Warneken, F. and Dominey, F.</td>
-	<td>Human-Robot Cooperation Based on Interaction Learning <p class="infolinks">[<a href="javascript:toggleInfo('lallee2010book','bibtex')">BibTeX</a>]</p></td>
-	<td>2010</td>
-	<td>From motor learning to interaction learning in robots&nbsp;</td>
-	<td>incollection</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_lallee2010book" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@incollection{lallee2010book,
-  author = {Lallee, S and Yoshida, E and Mallet, A and Nori, F and Natale, L and Metta, G and Warneken, Felix and Dominey, F},
-  title = {Human-Robot Cooperation Based on Interaction Learning},
-  booktitle = {From motor learning to interaction learning in robots},
-  publisher = {Springer},
-  year = {2010}
-}
-</pre></td>
-</tr>
 <tr id="metta2010icub" class="entry">
 	<td>Metta, G., Natale, L., Nori, F., Sandini, G., Vernon, D., Fadiga, L., Von Hofsten, C., Rosander, K., Lopes, M., Santos-Victor, J. and others</td>
 	<td>The iCub humanoid robot: An open-systems platform for research in cognitive development <p class="infolinks">[<a href="javascript:toggleInfo('metta2010icub','bibtex')">BibTeX</a>]</p></td>
@@ -2077,25 +2600,25 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Force control of a tendon driven joint actuated by dielectric elastomers <p class="infolinks">[<a href="javascript:toggleInfo('randazzo2010force','bibtex')">BibTeX</a>]</p></td>
 	<td>2010</td>
 	<td>Proceedings of the 12th International Conference on New Actuators (Actuator 2010)&nbsp;</td>
-	<td>article</td>
+	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_randazzo2010force" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@article{randazzo2010force,
+@inproceedings{randazzo2010force,
   author = {Randazzo, M and Fumagalli, M and Nori, F and Metta, G and Sandini, G},
   title = {Force control of a tendon driven joint actuated by dielectric elastomers},
-  journal = {Proceedings of the 12th International Conference on New Actuators (Actuator 2010)},
+  booktitle = {Proceedings of the 12th International Conference on New Actuators (Actuator 2010)},
   year = {2010}
 }
 </pre></td>
 </tr>
 <tr id="schmitz2010design" class="entry">
 	<td>Schmitz, A., Pattacini, U., Nori, F., Natale, L., Metta, G. and Sandini, G.</td>
-	<td>Design, realization and sensorization of the dexterous icub hand <p class="infolinks">[<a href="javascript:toggleInfo('schmitz2010design','bibtex')">BibTeX</a>]</p></td>
+	<td>Design, realization and sensorization of the dexterous iCub hand <p class="infolinks">[<a href="javascript:toggleInfo('schmitz2010design','bibtex')">BibTeX</a>]</p></td>
 	<td>2010</td>
-	<td>Humanoid Robots (Humanoids), 2010 10th IEEE-RAS International Conference on, pp. 186-191&nbsp;</td>
+	<td>2010 10th IEEE-RAS International Conference on Humanoid Robots, pp. 186-191&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -2104,8 +2627,8 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 <pre>
 @inproceedings{schmitz2010design,
   author = {Schmitz, Alexander and Pattacini, Ugo and Nori, Francesco and Natale, Lorenzo and Metta, Giorgio and Sandini, Giulio},
-  title = {Design, realization and sensorization of the dexterous icub hand},
-  booktitle = {Humanoid Robots (Humanoids), 2010 10th IEEE-RAS International Conference on},
+  title = {Design, realization and sensorization of the dexterous iCub hand},
+  booktitle = {2010 10th IEEE-RAS International Conference on Humanoid Robots},
   year = {2010},
   pages = {186--191}
 }
@@ -2129,46 +2652,6 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
   publisher = {Springer US},
   year = {2009},
   pages = {139--168}
-}
-</pre></td>
-</tr>
-<tr id="degallier2008modular" class="entry">
-	<td>Degallier, S., Righetti, L., Natale, L., Nori, F., Metta, G. and Ijspeert, A.</td>
-	<td>A modular bio-inspired architecture for movement generation for the infant-like robot iCub <p class="infolinks">[<a href="javascript:toggleInfo('degallier2008modular','bibtex')">BibTeX</a>]</p></td>
-	<td>2008</td>
-	<td>Biomedical Robotics and Biomechatronics, 2008. BioRob 2008. 2nd IEEE RAS &amp; EMBS International Conference on, pp. 795-800&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_degallier2008modular" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{degallier2008modular,
-  author = {Degallier, Sarah and Righetti, Ludovic and Natale, Lorenzo and Nori, Francesco and Metta, Giorgio and Ijspeert, Auke},
-  title = {A modular bio-inspired architecture for movement generation for the infant-like robot iCub},
-  booktitle = {Biomedical Robotics and Biomechatronics, 2008. BioRob 2008. 2nd IEEE RAS &amp; EMBS International Conference on},
-  year = {2008},
-  pages = {795--800}
-}
-</pre></td>
-</tr>
-<tr id="dominey2008anticipation" class="entry">
-	<td>Dominey, P.F., Metta, G., Nori, F. and Natale, L.</td>
-	<td>Anticipation and initiative in human-humanoid interaction <p class="infolinks">[<a href="javascript:toggleInfo('dominey2008anticipation','bibtex')">BibTeX</a>]</p></td>
-	<td>2008</td>
-	<td>Humanoid Robots, 2008. Humanoids 2008. 8th IEEE-RAS International Conference on, pp. 693-699&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_dominey2008anticipation" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{dominey2008anticipation,
-  author = {Dominey, Peter Ford and Metta, Giorgio and Nori, Francesco and Natale, Lorenzo},
-  title = {Anticipation and initiative in human-humanoid interaction},
-  booktitle = {Humanoid Robots, 2008. Humanoids 2008. 8th IEEE-RAS International Conference on},
-  year = {2008},
-  pages = {693--699}
 }
 </pre></td>
 </tr>
@@ -2199,7 +2682,7 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Fumagalli, M., Jamone, L., Metta, G., Natale, L., Nori, F., Parmiggiani, A., Randazzo, M. and Sandini, G.</td>
 	<td>A force sensor for the control of a human-like tendon driven neck <p class="infolinks">[<a href="javascript:toggleInfo('fumagalli2009force','bibtex')">BibTeX</a>]</p></td>
 	<td>2009</td>
-	<td>Humanoid Robots, 2009. Humanoids 2009. 9th IEEE-RAS International Conference on, pp. 478-485&nbsp;</td>
+	<td>2009 9th IEEE-RAS International Conference on Humanoid Robots, pp. 478-485&nbsp;</td>
 	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
@@ -2209,356 +2692,9 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 @inproceedings{fumagalli2009force,
   author = {Fumagalli, Matteo and Jamone, Lorenzo and Metta, Giorgio and Natale, Lorenzo and Nori, Francesco and Parmiggiani, Alberto and Randazzo, Marco and Sandini, Giulio},
   title = {A force sensor for the control of a human-like tendon driven neck},
-  booktitle = {Humanoid Robots, 2009. Humanoids 2009. 9th IEEE-RAS International Conference on},
+  booktitle = {2009 9th IEEE-RAS International Conference on Humanoid Robots},
   year = {2009},
   pages = {478--485}
-}
-</pre></td>
-</tr>
-<tr id="gasbarro2004motorcycle" class="entry">
-	<td>Gasbarro, L., Beghi, A., Frezza, R., Nori, F. and Spagnol, C.</td>
-	<td>Motorcycle trajectory reconstruction by integration of vision and MEMS accelerometers <p class="infolinks">[<a href="javascript:toggleInfo('gasbarro2004motorcycle','bibtex')">BibTeX</a>]</p></td>
-	<td>2004</td>
-	<td><br/>Vol. 1Decision and Control, 2004. CDC. 43rd IEEE Conference on, pp. 779-783&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_gasbarro2004motorcycle" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{gasbarro2004motorcycle,
-  author = {Gasbarro, Luca and Beghi, Alessandro and Frezza, Ruggero and Nori, Francesco and Spagnol, Christian},
-  title = {Motorcycle trajectory reconstruction by integration of vision and MEMS accelerometers},
-  booktitle = {Decision and Control, 2004. CDC. 43rd IEEE Conference on},
-  year = {2004},
-  volume = {1},
-  pages = {779--783}
-}
-</pre></td>
-</tr>
-<tr id="jamone2006james" class="entry">
-	<td>Jamone, L., Metta, G., Nori, F. and Sandini, G.</td>
-	<td>James: A humanoid robot acting over an unstructured world <p class="infolinks">[<a href="javascript:toggleInfo('jamone2006james','bibtex')">BibTeX</a>]</p></td>
-	<td>2006</td>
-	<td>Humanoid Robots, 2006 6th IEEE-RAS International Conference on, pp. 143-150&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_jamone2006james" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{jamone2006james,
-  author = {Jamone, Lorenzo and Metta, Giorgio and Nori, Francesco and Sandini, Giulio},
-  title = {James: A humanoid robot acting over an unstructured world},
-  booktitle = {Humanoid Robots, 2006 6th IEEE-RAS International Conference on},
-  year = {2006},
-  pages = {143--150}
-}
-</pre></td>
-</tr>
-<tr id="menegatti2001designing" class="entry">
-	<td>Menegatti, E., Nori, F., Pagello, E., Pellizzari, C. and Spagnoli, D.</td>
-	<td>Designing an omnidirectional vision system for a goalkeeper robot <p class="infolinks">[<a href="javascript:toggleInfo('menegatti2001designing','bibtex')">BibTeX</a>]</p></td>
-	<td>2001</td>
-	<td>RoboCup 2001: Robot Soccer World Cup V, pp. 81-91&nbsp;</td>
-	<td>incollection</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_menegatti2001designing" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@incollection{menegatti2001designing,
-  author = {Menegatti, Emanuele and Nori, Francesco and Pagello, Enrico and Pellizzari, Carlo and Spagnoli, Davide},
-  title = {Designing an omnidirectional vision system for a goalkeeper robot},
-  booktitle = {RoboCup 2001: Robot Soccer World Cup V},
-  publisher = {Springer Berlin Heidelberg},
-  year = {2001},
-  pages = {81--91}
-}
-</pre></td>
-</tr>
-<tr id="metta2008icub" class="entry">
-	<td>Metta, G., Sandini, G., Vernon, D., Natale, L. and Nori, F.</td>
-	<td>The iCub humanoid robot: an open platform for research in embodied cognition <p class="infolinks">[<a href="javascript:toggleInfo('metta2008icub','bibtex')">BibTeX</a>]</p></td>
-	<td>2008</td>
-	<td>Proceedings of the 8th workshop on performance metrics for intelligent systems, pp. 50-56&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_metta2008icub" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{metta2008icub,
-  author = {Metta, Giorgio and Sandini, Giulio and Vernon, David and Natale, Lorenzo and Nori, Francesco},
-  title = {The iCub humanoid robot: an open platform for research in embodied cognition},
-  booktitle = {Proceedings of the 8th workshop on performance metrics for intelligent systems},
-  year = {2008},
-  pages = {50--56}
-}
-</pre></td>
-</tr>
-<tr id="metta2007icub" class="entry">
-	<td>Metta, G., Sandini, G., Vernon, D., Natale, L. and Nori, F.</td>
-	<td>The icub cognitive humanoid robot: An open-system research platform for enactive cognition. In 50 Years of Artificial Intelligence <p class="infolinks">[<a href="javascript:toggleInfo('metta2007icub','bibtex')">BibTeX</a>]</p></td>
-	<td>2007</td>
-	<td>&nbsp;</td>
-	<td>book</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_metta2007icub" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@book{metta2007icub,
-  author = {Metta, G and Sandini, G and Vernon, D and Natale, L and Nori, F},
-  title = {The icub cognitive humanoid robot: An open-system research platform for enactive cognition. In 50 Years of Artificial Intelligence},
-  publisher = {Springer Berlin/Heidelberg},
-  year = {2007}
-}
-</pre></td>
-</tr>
-<tr id="michieli2008study" class="entry">
-	<td>Michieli, L.D., Nori, F., Prato, A.P. and Sandini, G.</td>
-	<td>Study on humanoid robot systems: An energy approach <p class="infolinks">[<a href="javascript:toggleInfo('michieli2008study','bibtex')">BibTeX</a>]</p></td>
-	<td>2008</td>
-	<td>Humanoid Robots, 2008. Humanoids 2008. 8th IEEE-RAS International Conference on, pp. 219-226&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_michieli2008study" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{michieli2008study,
-  author = {Michieli, L De and Nori, Francesco and Prato, A Pini and Sandini, Giulio},
-  title = {Study on humanoid robot systems: An energy approach},
-  booktitle = {Humanoid Robots, 2008. Humanoids 2008. 8th IEEE-RAS International Conference on},
-  year = {2008},
-  pages = {219--226}
-}
-</pre></td>
-</tr>
-<tr id="natale2007learning" class="entry">
-	<td>Natale, L., Nori, F., Sandini, G. and Metta, G.</td>
-	<td>Learning precise 3d reaching in a humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('natale2007learning','bibtex')">BibTeX</a>]</p></td>
-	<td>2007</td>
-	<td>Development and Learning, 2007. ICDL 2007. IEEE 6th International Conference on, pp. 324-329&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_natale2007learning" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{natale2007learning,
-  author = {Natale, Lorenzo and Nori, Francesco and Sandini, Giulio and Metta, Giorgio},
-  title = {Learning precise 3d reaching in a humanoid robot},
-  booktitle = {Development and Learning, 2007. ICDL 2007. IEEE 6th International Conference on},
-  year = {2007},
-  pages = {324--329}
-}
-</pre></td>
-</tr>
-<tr id="nori2005symbolic" class="entry">
-	<td>Nori, F.</td>
-	<td>Symbolic Control with Biologically Inspired Motion Primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2005symbolic','bibtex')">BibTeX</a>]</p></td>
-	<td>2005</td>
-	<td><i>School</i>: PhD thesis, Universita degli studi di Padova&nbsp;</td>
-	<td>phdthesis</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2005symbolic" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@phdthesis{nori2005symbolic,
-  author = {Nori, Francesco},
-  title = {Symbolic Control with Biologically Inspired Motion Primitives},
-  school = {PhD thesis, Universita degli studi di Padova},
-  year = {2005}
-}
-</pre></td>
-</tr>
-<tr id="nori2005control" class="entry">
-	<td>Nori, F. and Frezza, R.</td>
-	<td>A control theory approach to the analysis and synthesis of the experimentally observed motion primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2005control','bibtex')">BibTeX</a>]</p></td>
-	<td>2005</td>
-	<td>Biological cybernetics<br/>Vol. 93(5), pp. 323-342&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2005control" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{nori2005control,
-  author = {Nori, Francesco and Frezza, Ruggero},
-  title = {A control theory approach to the analysis and synthesis of the experimentally observed motion primitives},
-  journal = {Biological cybernetics},
-  publisher = {Springer-Verlag},
-  year = {2005},
-  volume = {93},
-  number = {5},
-  pages = {323--342}
-}
-</pre></td>
-</tr>
-<tr id="nori2005controlb" class="entry">
-	<td>Nori, F. and Frezza, R.</td>
-	<td>Control of a manipulator with a minimum number of motion primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2005controlb','bibtex')">BibTeX</a>]</p></td>
-	<td>2005</td>
-	<td>Robotics and Automation, 2005. ICRA 2005. Proceedings of the 2005 IEEE International Conference on, pp. 2344-2349&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2005controlb" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{nori2005controlb,
-  author = {Nori, Francesco and Frezza, Ruggero},
-  title = {Control of a manipulator with a minimum number of motion primitives},
-  booktitle = {Robotics and Automation, 2005. ICRA 2005. Proceedings of the 2005 IEEE International Conference on},
-  year = {2005},
-  pages = {2344--2349}
-}
-</pre></td>
-</tr>
-<tr id="nori2004biologically" class="entry">
-	<td>Nori, F. and Frezza, R.</td>
-	<td>Biologically inspired control of a kinematic chain using the superposition of motion primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2004biologically','bibtex')">BibTeX</a>]</p></td>
-	<td>2004</td>
-	<td><br/>Vol. 1Decision and Control, 2004. CDC. 43rd IEEE Conference on, pp. 1075-1080&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2004biologically" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{nori2004biologically,
-  author = {Nori, Francesco and Frezza, Ruggero},
-  title = {Biologically inspired control of a kinematic chain using the superposition of motion primitives},
-  booktitle = {Decision and Control, 2004. CDC. 43rd IEEE Conference on},
-  year = {2004},
-  volume = {1},
-  pages = {1075--1080}
-}
-</pre></td>
-</tr>
-<tr id="nori2004linear" class="entry">
-	<td>Nori, F. and Frezza, R.</td>
-	<td>Linear optimal control problems and quadratic cost functions estimation <p class="infolinks">[<a href="javascript:toggleInfo('nori2004linear','bibtex')">BibTeX</a>]</p></td>
-	<td>2004</td>
-	<td>Proceedings of the 12th IEEE Mediterranean Conference on Control and Automation (MED'04), pp. 6-9&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2004linear" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{nori2004linear,
-  author = {Nori, Francesco and Frezza, Ruggero},
-  title = {Linear optimal control problems and quadratic cost functions estimation},
-  journal = {Proceedings of the 12th IEEE Mediterranean Conference on Control and Automation (MED'04)},
-  year = {2004},
-  pages = {6--9}
-}
-</pre></td>
-</tr>
-<tr id="nori2003accurate" class="entry">
-	<td>Nori, F. and Frezza, R.</td>
-	<td>Accurate reconstruction of the path followed by a motorcycle from the on-board camera images <p class="infolinks">[<a href="javascript:toggleInfo('nori2003accurate','bibtex')">BibTeX</a>]</p></td>
-	<td>2003</td>
-	<td>Intelligent Vehicles Symposium, 2003. Proceedings. IEEE, pp. 259-264&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2003accurate" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{nori2003accurate,
-  author = {Nori, Francesco and Frezza, Ruggero},
-  title = {Accurate reconstruction of the path followed by a motorcycle from the on-board camera images},
-  booktitle = {Intelligent Vehicles Symposium, 2003. Proceedings. IEEE},
-  year = {2003},
-  pages = {259--264}
-}
-</pre></td>
-</tr>
-<tr id="nori2007accurate" class="entry">
-	<td>Nori, F., Jamone, L., Sandini, G. and Metta, G.</td>
-	<td>Accurate control of a human-like tendon-driven neck <p class="infolinks">[<a href="javascript:toggleInfo('nori2007accurate','bibtex')">BibTeX</a>]</p></td>
-	<td>2007</td>
-	<td>Humanoid Robots, 2007 7th IEEE-RAS International Conference on, pp. 371-378&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2007accurate" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{nori2007accurate,
-  author = {Nori, Francesco and Jamone, Lorenzo and Sandini, Giulio and Metta, Giorgio},
-  title = {Accurate control of a human-like tendon-driven neck},
-  booktitle = {Humanoid Robots, 2007 7th IEEE-RAS International Conference on},
-  year = {2007},
-  pages = {371--378}
-}
-</pre></td>
-</tr>
-<tr id="nori2006adaptive" class="entry">
-	<td>Nori, F., Metta, G., Jamone, L. and Sandini, G.</td>
-	<td>Adaptive combination of motor primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2006adaptive','bibtex')">BibTeX</a>]</p></td>
-	<td>2006</td>
-	<td>ciT<br/>Vol. 2, pp. 6&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2006adaptive" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{nori2006adaptive,
-  author = {Nori, Francesco and Metta, G and Jamone, L and Sandini, G},
-  title = {Adaptive combination of motor primitives},
-  journal = {ciT},
-  year = {2006},
-  volume = {2},
-  pages = {6}
-}
-</pre></td>
-</tr>
-<tr id="nori2008exploiting" class="entry">
-	<td>Nori, F., Metta, G. and Sandini, G.</td>
-	<td>Exploiting motor modules in modular contexts <p class="infolinks">[<a href="javascript:toggleInfo('nori2008exploiting','bibtex')">BibTeX</a>]</p></td>
-	<td>2008</td>
-	<td>Book chapter. Robust Intelligent Systems. Schuster, Alfons (Ed.)<br/>Vol. 12(299), pp. 81&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2008exploiting" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{nori2008exploiting,
-  author = {Nori, Francesco and Metta, Giorgio and Sandini, Giulio},
-  title = {Exploiting motor modules in modular contexts},
-  journal = {Book chapter. Robust Intelligent Systems. Schuster, Alfons (Ed.)},
-  year = {2008},
-  volume = {12},
-  number = {299},
-  pages = {81}
-}
-</pre></td>
-</tr>
-<tr id="nori2007autonomous" class="entry">
-	<td>Nori, F., Natale, L., Sandini, G. and Metta, G.</td>
-	<td>Autonomous learning of 3d reaching in a humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('nori2007autonomous','bibtex')">BibTeX</a>]</p></td>
-	<td>2007</td>
-	<td>Intelligent Robots and Systems, 2007. IROS 2007. IEEE/RSJ International Conference on, pp. 1142-1147&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_nori2007autonomous" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{nori2007autonomous,
-  author = {Nori, Francesco and Natale, Lorenzo and Sandini, Giulio and Metta, Giorgio},
-  title = {Autonomous learning of 3d reaching in a humanoid robot},
-  booktitle = {Intelligent Robots and Systems, 2007. IROS 2007. IEEE/RSJ International Conference on},
-  year = {2007},
-  pages = {1142--1147}
 }
 </pre></td>
 </tr>
@@ -2566,59 +2702,18 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 	<td>Nori, F., Sandini, G. and Konczak, J&uuml;.</td>
 	<td>Can imprecise internal motor models explain the ataxic hand trajectories during reaching in young infants? <p class="infolinks">[<a href="javascript:toggleInfo('nori2009can','bibtex')">BibTeX</a>]</p></td>
 	<td>2009</td>
-	<td>Proc. 9th Int. Conf. Epigenetic Robot.: Modeling Cogn. Develop. Robot. Syst&nbsp;</td>
-	<td>article</td>
+	<td>Ninth International Conference on Epigenetic Robotics: Modeling Cognitive Development in Robotic Systems (EPIROB)&nbsp;</td>
+	<td>inproceedings</td>
 	<td>&nbsp;</td>
 </tr>
 <tr id="bib_nori2009can" class="bibtex noshow">
 <td colspan="6"><b>BibTeX</b>:
 <pre>
-@article{nori2009can,
+@inproceedings{nori2009can,
   author = {Nori, Francesco and Sandini, Giulio and Konczak, J&uuml;rgen},
   title = {Can imprecise internal motor models explain the ataxic hand trajectories during reaching in young infants?},
-  journal = {Proc. 9th Int. Conf. Epigenetic Robot.: Modeling Cogn. Develop. Robot. Syst},
+  booktitle = {Ninth International Conference on Epigenetic Robotics: Modeling Cognitive Development in Robotic Systems (EPIROB)},
   year = {2009}
-}
-</pre></td>
-</tr>
-<tr id="saegusa2007sensory" class="entry">
-	<td>Saegusa, R., Nori, F., Sandini, G., Metta, G. and Sakka, S.</td>
-	<td>Sensory prediction for autonomous robots <p class="infolinks">[<a href="javascript:toggleInfo('saegusa2007sensory','bibtex')">BibTeX</a>]</p></td>
-	<td>2007</td>
-	<td>Humanoid Robots, 2007 7th IEEE-RAS International Conference on, pp. 102-108&nbsp;</td>
-	<td>inproceedings</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_saegusa2007sensory" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@inproceedings{saegusa2007sensory,
-  author = {Saegusa, Ryo and Nori, Francesco and Sandini, Giulio and Metta, Giorgio and Sakka, Sophie},
-  title = {Sensory prediction for autonomous robots},
-  booktitle = {Humanoid Robots, 2007 7th IEEE-RAS International Conference on},
-  year = {2007},
-  pages = {102--108}
-}
-</pre></td>
-</tr>
-<tr id="sciutti2004human" class="entry">
-	<td>Sciutti, A., Nori, F., Jacono, M., Metta, G., Sandini, G. and Fadiga, L.</td>
-	<td>Human and robotic goal oriented actions evoke motor resonance a gaze behavior study <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2004human','bibtex')">BibTeX</a>]</p></td>
-	<td>2004</td>
-	<td>Curr Biol<br/>Vol. 14, pp. 117-120&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_sciutti2004human" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{sciutti2004human,
-  author = {Sciutti, Alessandra and Nori, Francesco and Jacono, Marco and Metta, Giorgio and Sandini, Giulio and Fadiga, Luciano},
-  title = {Human and robotic goal oriented actions evoke motor resonance a gaze behavior study},
-  journal = {Curr Biol},
-  year = {2004},
-  volume = {14},
-  pages = {117--120}
 }
 </pre></td>
 </tr>
@@ -2667,6 +2762,129 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
+<tr id="de2008study" class="entry">
+	<td>De Michieli, L., Nori, F., Prato, A.P. and Sandini, G.</td>
+	<td>Study on humanoid robot systems: An energy approach <p class="infolinks">[<a href="javascript:toggleInfo('de2008study','bibtex')">BibTeX</a>]</p></td>
+	<td>2008</td>
+	<td>Humanoids 2008-8th IEEE-RAS International Conference on Humanoid Robots, pp. 219-226&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_de2008study" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{de2008study,
+  author = {De Michieli, Lorenzo and Nori, Francesco and Prato, A Pini and Sandini, Giulio},
+  title = {Study on humanoid robot systems: An energy approach},
+  booktitle = {Humanoids 2008-8th IEEE-RAS International Conference on Humanoid Robots},
+  year = {2008},
+  pages = {219--226}
+}
+</pre></td>
+</tr>
+<tr id="degallier2008modular" class="entry">
+	<td>Degallier, S., Righetti, L., Natale, L., Nori, F., Metta, G. and Ijspeert, A.</td>
+	<td>A modular bio-inspired architecture for movement generation for the infant-like robot iCub <p class="infolinks">[<a href="javascript:toggleInfo('degallier2008modular','bibtex')">BibTeX</a>]</p></td>
+	<td>2008</td>
+	<td>2008 2nd IEEE RAS &amp; EMBS International Conference on Biomedical Robotics and Biomechatronics, pp. 795-800&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_degallier2008modular" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{degallier2008modular,
+  author = {Degallier, Sarah and Righetti, Ludovic and Natale, Lorenzo and Nori, Francesco and Metta, Giorgio and Ijspeert, Auke},
+  title = {A modular bio-inspired architecture for movement generation for the infant-like robot iCub},
+  booktitle = {2008 2nd IEEE RAS &amp; EMBS International Conference on Biomedical Robotics and Biomechatronics},
+  year = {2008},
+  pages = {795--800}
+}
+</pre></td>
+</tr>
+<tr id="dominey2008anticipation" class="entry">
+	<td>Dominey, P.F., Metta, G., Nori, F. and Natale, L.</td>
+	<td>Anticipation and initiative in human-humanoid interaction <p class="infolinks">[<a href="javascript:toggleInfo('dominey2008anticipation','bibtex')">BibTeX</a>]</p></td>
+	<td>2008</td>
+	<td>Humanoids 2008-8th IEEE-RAS International Conference on Humanoid Robots, pp. 693-699&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_dominey2008anticipation" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{dominey2008anticipation,
+  author = {Dominey, Peter Ford and Metta, Giorgio and Nori, Francesco and Natale, Lorenzo},
+  title = {Anticipation and initiative in human-humanoid interaction},
+  booktitle = {Humanoids 2008-8th IEEE-RAS International Conference on Humanoid Robots},
+  year = {2008},
+  pages = {693--699}
+}
+</pre></td>
+</tr>
+<tr id="metta2008icub" class="entry">
+	<td>Metta, G., Sandini, G., Vernon, D., Natale, L. and Nori, F.</td>
+	<td>The iCub humanoid robot: an open platform for research in embodied cognition <p class="infolinks">[<a href="javascript:toggleInfo('metta2008icub','bibtex')">BibTeX</a>]</p></td>
+	<td>2008</td>
+	<td>Proceedings of the 8th workshop on performance metrics for intelligent systems, pp. 50-56&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_metta2008icub" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{metta2008icub,
+  author = {Metta, Giorgio and Sandini, Giulio and Vernon, David and Natale, Lorenzo and Nori, Francesco},
+  title = {The iCub humanoid robot: an open platform for research in embodied cognition},
+  booktitle = {Proceedings of the 8th workshop on performance metrics for intelligent systems},
+  year = {2008},
+  pages = {50--56}
+}
+</pre></td>
+</tr>
+<tr id="nori2008exploiting" class="entry">
+	<td>Nori, F., Metta, G. and Sandini, G.</td>
+	<td>Exploiting motor modules in modular contexts <p class="infolinks">[<a href="javascript:toggleInfo('nori2008exploiting','bibtex')">BibTeX</a>]</p></td>
+	<td>2008</td>
+	<td>Book chapter. Robust Intelligent Systems. Schuster, Alfons (Ed.)<br/>Vol. 12(299), pp. 81&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2008exploiting" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{nori2008exploiting,
+  author = {Nori, Francesco and Metta, Giorgio and Sandini, Giulio},
+  title = {Exploiting motor modules in modular contexts},
+  journal = {Book chapter. Robust Intelligent Systems. Schuster, Alfons (Ed.)},
+  year = {2008},
+  volume = {12},
+  number = {299},
+  pages = {81}
+}
+</pre></td>
+</tr>
+<tr id="nori2008exploiting" class="entry">
+	<td>Nori, F., Metta, G. and Sandini, G.</td>
+	<td>Exploiting motor modules in modular contexts in humanoid robotics <p class="infolinks">[<a href="javascript:toggleInfo('nori2008exploiting','bibtex')">BibTeX</a>]</p></td>
+	<td>2008</td>
+	<td>Robust Intelligent Systems, pp. 209-229&nbsp;</td>
+	<td>incollection</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2008exploiting" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@incollection{nori2008exploiting,
+  author = {Nori, Francesco and Metta, Giorgio and Sandini, Giulio},
+  title = {Exploiting motor modules in modular contexts in humanoid robotics},
+  booktitle = {Robust Intelligent Systems},
+  publisher = {Springer London},
+  year = {2008},
+  pages = {209--229}
+}
+</pre></td>
+</tr>
 <tr id="sciutti2008motor" class="entry">
 	<td>Sciutti, A., Nori, F., Metta, G., Pozzo, T. and Sandini, G.</td>
 	<td>Motor and perception-based prediction <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2008motor','bibtex')">BibTeX</a>]</p></td>
@@ -2684,25 +2902,6 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
   journal = {Perception},
   year = {2008},
   volume = {37}
-}
-</pre></td>
-</tr>
-<tr id="sciutti2007internal" class="entry">
-	<td>Sciutti, A., Nori, F., Metta, G. and Sandini, G.</td>
-	<td>Internal models in interception <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2007internal','bibtex')">BibTeX</a>]</p></td>
-	<td>2007</td>
-	<td>ESF Conference Three dimensional sensory and motor space: perceptual consequences of motor action, Sant Feliu de Guixols-Spain&nbsp;</td>
-	<td>article</td>
-	<td>&nbsp;</td>
-</tr>
-<tr id="bib_sciutti2007internal" class="bibtex noshow">
-<td colspan="6"><b>BibTeX</b>:
-<pre>
-@article{sciutti2007internal,
-  author = {Sciutti, Alessandra and Nori, Francesco and Metta, Giorgio and Sandini, Giulio},
-  title = {Internal models in interception},
-  journal = {ESF Conference Three dimensional sensory and motor space: perceptual consequences of motor action, Sant Feliu de Guixols-Spain},
-  year = {2007}
 }
 </pre></td>
 </tr>
@@ -2726,13 +2925,366 @@ p.infolinks { margin: 0.3em 0em 0em 0em; padding: 0px; }
 }
 </pre></td>
 </tr>
-
-<!-- close left --></div>
-<!-- close container --></div>
-
-</body></html>
-
-<!--
-<div id="footer_short">Template by: <a href="http://www.csstemplateheaven.com" title="CssTemplateHeaven">CssTemplateHeaven</a>
-</div> 
--->
+<tr id="metta2007icub" class="entry">
+	<td>Metta, G., Sandini, G., Vernon, D., Natale, L. and Nori, F.</td>
+	<td>The icub cognitive humanoid robot: An open-system research platform for enactive cognition. In 50 Years of Artificial Intelligence <p class="infolinks">[<a href="javascript:toggleInfo('metta2007icub','bibtex')">BibTeX</a>]</p></td>
+	<td>2007</td>
+	<td>&nbsp;</td>
+	<td>misc</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_metta2007icub" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@misc{metta2007icub,
+  author = {Metta, G and Sandini, G and Vernon, D and Natale, L and Nori, F},
+  title = {The icub cognitive humanoid robot: An open-system research platform for enactive cognition. In 50 Years of Artificial Intelligence},
+  publisher = {Springer Berlin/Heidelberg},
+  year = {2007}
+}
+</pre></td>
+</tr>
+<tr id="natale2007learning" class="entry">
+	<td>Natale, L., Nori, F., Sandini, G. and Metta, G.</td>
+	<td>Learning precise 3d reaching in a humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('natale2007learning','bibtex')">BibTeX</a>]</p></td>
+	<td>2007</td>
+	<td>2007 IEEE 6th International Conference on Development and Learning, pp. 324-329&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_natale2007learning" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{natale2007learning,
+  author = {Natale, Lorenzo and Nori, Francesco and Sandini, Giulio and Metta, Giorgio},
+  title = {Learning precise 3d reaching in a humanoid robot},
+  booktitle = {2007 IEEE 6th International Conference on Development and Learning},
+  year = {2007},
+  pages = {324--329}
+}
+</pre></td>
+</tr>
+<tr id="nori2007accurate" class="entry">
+	<td>Nori, F., Jamone, L., Sandini, G. and Metta, G.</td>
+	<td>Accurate control of a human-like tendon-driven neck <p class="infolinks">[<a href="javascript:toggleInfo('nori2007accurate','bibtex')">BibTeX</a>]</p></td>
+	<td>2007</td>
+	<td>2007 7th IEEE-RAS International Conference on Humanoid Robots, pp. 371-378&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2007accurate" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{nori2007accurate,
+  author = {Nori, Francesco and Jamone, Lorenzo and Sandini, Giulio and Metta, Giorgio},
+  title = {Accurate control of a human-like tendon-driven neck},
+  booktitle = {2007 7th IEEE-RAS International Conference on Humanoid Robots},
+  year = {2007},
+  pages = {371--378}
+}
+</pre></td>
+</tr>
+<tr id="nori2007autonomous" class="entry">
+	<td>Nori, F., Natale, L., Sandini, G. and Metta, G.</td>
+	<td>Autonomous learning of 3d reaching in a humanoid robot <p class="infolinks">[<a href="javascript:toggleInfo('nori2007autonomous','bibtex')">BibTeX</a>]</p></td>
+	<td>2007</td>
+	<td>2007 IEEE/RSJ International Conference on Intelligent Robots and Systems, pp. 1142-1147&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2007autonomous" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{nori2007autonomous,
+  author = {Nori, Francesco and Natale, Lorenzo and Sandini, Giulio and Metta, Giorgio},
+  title = {Autonomous learning of 3d reaching in a humanoid robot},
+  booktitle = {2007 IEEE/RSJ International Conference on Intelligent Robots and Systems},
+  year = {2007},
+  pages = {1142--1147}
+}
+</pre></td>
+</tr>
+<tr id="saegusa2007sensory" class="entry">
+	<td>Saegusa, R., Nori, F., Sandini, G., Metta, G. and Sakka, S.</td>
+	<td>Sensory prediction for autonomous robots <p class="infolinks">[<a href="javascript:toggleInfo('saegusa2007sensory','bibtex')">BibTeX</a>]</p></td>
+	<td>2007</td>
+	<td>2007 7th IEEE-RAS International Conference on Humanoid Robots, pp. 102-108&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_saegusa2007sensory" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{saegusa2007sensory,
+  author = {Saegusa, Ryo and Nori, Francesco and Sandini, Giulio and Metta, Giorgio and Sakka, Sophie},
+  title = {Sensory prediction for autonomous robots},
+  booktitle = {2007 7th IEEE-RAS International Conference on Humanoid Robots},
+  year = {2007},
+  pages = {102--108}
+}
+</pre></td>
+</tr>
+<tr id="sciutti2007internal" class="entry">
+	<td>Sciutti, A., Nori, F., Metta, G. and Sandini, G.</td>
+	<td>Internal models in interception <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2007internal','bibtex')">BibTeX</a>]</p></td>
+	<td>2007</td>
+	<td>ESF Conference Three dimensional sensory and motor space: perceptual consequences of motor action, Sant Feliu de Guixols-Spain&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_sciutti2007internal" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{sciutti2007internal,
+  author = {Sciutti, Alessandra and Nori, Francesco and Metta, Giorgio and Sandini, Giulio},
+  title = {Internal models in interception},
+  booktitle = {ESF Conference Three dimensional sensory and motor space: perceptual consequences of motor action, Sant Feliu de Guixols-Spain},
+  year = {2007}
+}
+</pre></td>
+</tr>
+<tr id="jamone2006james" class="entry">
+	<td>Jamone, L., Metta, G., Nori, F. and Sandini, G.</td>
+	<td>James: A humanoid robot acting over an unstructured world <p class="infolinks">[<a href="javascript:toggleInfo('jamone2006james','bibtex')">BibTeX</a>]</p></td>
+	<td>2006</td>
+	<td>2006 6th IEEE-RAS International Conference on Humanoid Robots, pp. 143-150&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_jamone2006james" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{jamone2006james,
+  author = {Jamone, Lorenzo and Metta, Giorgio and Nori, Francesco and Sandini, Giulio},
+  title = {James: A humanoid robot acting over an unstructured world},
+  booktitle = {2006 6th IEEE-RAS International Conference on Humanoid Robots},
+  year = {2006},
+  pages = {143--150}
+}
+</pre></td>
+</tr>
+<tr id="nori2006adaptive" class="entry">
+	<td>Nori, F., Metta, G., Jamone, L. and Sandini, G.</td>
+	<td>Adaptive combination of motor primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2006adaptive','bibtex')">BibTeX</a>]</p></td>
+	<td>2006</td>
+	<td>ciT<br/>Vol. 2, pp. 6&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2006adaptive" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{nori2006adaptive,
+  author = {Nori, F and Metta, G and Jamone, L and Sandini, G},
+  title = {Adaptive combination of motor primitives},
+  journal = {ciT},
+  year = {2006},
+  volume = {2},
+  pages = {6}
+}
+</pre></td>
+</tr>
+<tr id="metta2005robotcub" class="entry">
+	<td>Metta, G., Vernon, D. and Sandini, G.</td>
+	<td>The RobotCub Approach to the Development of Cognition <p class="infolinks">[<a href="javascript:toggleInfo('metta2005robotcub','bibtex')">BibTeX</a>]</p></td>
+	<td>2005</td>
+	<td>&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_metta2005robotcub" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{metta2005robotcub,
+  author = {Metta, Giorgio and Vernon, David and Sandini, Giulio},
+  title = {The RobotCub Approach to the Development of Cognition},
+  publisher = {Lund University Cognitive Studies},
+  year = {2005}
+}
+</pre></td>
+</tr>
+<tr id="nori2005control" class="entry">
+	<td>Nori, F. and Frezza, R.</td>
+	<td>A control theory approach to the analysis and synthesis of the experimentally observed motion primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2005control','bibtex')">BibTeX</a>]</p></td>
+	<td>2005</td>
+	<td>Biological cybernetics<br/>Vol. 93(5), pp. 323-342&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2005control" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{nori2005control,
+  author = {Nori, Francesco and Frezza, Ruggero},
+  title = {A control theory approach to the analysis and synthesis of the experimentally observed motion primitives},
+  journal = {Biological cybernetics},
+  publisher = {Springer-Verlag},
+  year = {2005},
+  volume = {93},
+  number = {5},
+  pages = {323--342}
+}
+</pre></td>
+</tr>
+<tr id="nori2005control" class="entry">
+	<td>Nori, F. and Frezza, R.</td>
+	<td>Control of a manipulator with a minimum number of motion primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2005control','bibtex')">BibTeX</a>]</p></td>
+	<td>2005</td>
+	<td>Proceedings of the 2005 IEEE International Conference on Robotics and Automation, pp. 2344-2349&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2005control" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{nori2005control,
+  author = {Nori, Francesco and Frezza, Ruggero},
+  title = {Control of a manipulator with a minimum number of motion primitives},
+  booktitle = {Proceedings of the 2005 IEEE International Conference on Robotics and Automation},
+  year = {2005},
+  pages = {2344--2349}
+}
+</pre></td>
+</tr>
+<tr id="nori2005symbolic" class="entry">
+	<td>Nori, F.</td>
+	<td>Symbolic Control with Biologically Inspired Motion Primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2005symbolic','bibtex')">BibTeX</a>]</p></td>
+	<td>2005</td>
+	<td><i>School</i>: PhD thesis, Universita degli studi di Padova&nbsp;</td>
+	<td>phdthesis</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2005symbolic" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@phdthesis{nori2005symbolic,
+  author = {Nori, Francesco},
+  title = {Symbolic Control with Biologically Inspired Motion Primitives},
+  school = {PhD thesis, Universita degli studi di Padova},
+  year = {2005}
+}
+</pre></td>
+</tr>
+<tr id="gasbarro2004motorcycle" class="entry">
+	<td>Gasbarro, L., Beghi, A., Frezza, R., Nori, F. and Spagnol, C.</td>
+	<td>Motorcycle trajectory reconstruction by integration of vision and MEMS accelerometers <p class="infolinks">[<a href="javascript:toggleInfo('gasbarro2004motorcycle','bibtex')">BibTeX</a>]</p></td>
+	<td>2004</td>
+	<td><br/>Vol. 1Decision and Control, 2004. CDC. 43rd IEEE Conference on, pp. 779-783&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_gasbarro2004motorcycle" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{gasbarro2004motorcycle,
+  author = {Gasbarro, Luca and Beghi, Alessandro and Frezza, Ruggero and Nori, Francesco and Spagnol, Christian},
+  title = {Motorcycle trajectory reconstruction by integration of vision and MEMS accelerometers},
+  booktitle = {Decision and Control, 2004. CDC. 43rd IEEE Conference on},
+  year = {2004},
+  volume = {1},
+  pages = {779--783}
+}
+</pre></td>
+</tr>
+<tr id="nori2004biologically" class="entry">
+	<td>Nori, F. and Frezza, R.</td>
+	<td>Biologically inspired control of a kinematic chain using the superposition of motion primitives <p class="infolinks">[<a href="javascript:toggleInfo('nori2004biologically','bibtex')">BibTeX</a>]</p></td>
+	<td>2004</td>
+	<td><br/>Vol. 1Decision and Control, 2004. CDC. 43rd IEEE Conference on, pp. 1075-1080&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2004biologically" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{nori2004biologically,
+  author = {Nori, Francesco and Frezza, Ruggero},
+  title = {Biologically inspired control of a kinematic chain using the superposition of motion primitives},
+  booktitle = {Decision and Control, 2004. CDC. 43rd IEEE Conference on},
+  year = {2004},
+  volume = {1},
+  pages = {1075--1080}
+}
+</pre></td>
+</tr>
+<tr id="nori2004linear" class="entry">
+	<td>Nori, F. and Frezza, R.</td>
+	<td>Linear optimal control problems and quadratic cost functions estimation <p class="infolinks">[<a href="javascript:toggleInfo('nori2004linear','bibtex')">BibTeX</a>]</p></td>
+	<td>2004</td>
+	<td>Proceedings of the 12th IEEE Mediterranean Conference on Control and Automation (MED'04), pp. 6-9&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2004linear" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{nori2004linear,
+  author = {Nori, Francesco and Frezza, Ruggero},
+  title = {Linear optimal control problems and quadratic cost functions estimation},
+  booktitle = {Proceedings of the 12th IEEE Mediterranean Conference on Control and Automation (MED'04)},
+  year = {2004},
+  pages = {6--9}
+}
+</pre></td>
+</tr>
+<tr id="sciutti2004human" class="entry">
+	<td>Sciutti, A., Nori, F., Jacono, M., Metta, G., Sandini, G. and Fadiga, L.</td>
+	<td>Human and robotic goal oriented actions evoke motor resonance a gaze behavior study <p class="infolinks">[<a href="javascript:toggleInfo('sciutti2004human','bibtex')">BibTeX</a>]</p></td>
+	<td>2004</td>
+	<td>Curr Biol<br/>Vol. 14, pp. 117-120&nbsp;</td>
+	<td>article</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_sciutti2004human" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@article{sciutti2004human,
+  author = {Sciutti, Alessandra and Nori, Francesco and Jacono, Marco and Metta, Giorgio and Sandini, Giulio and Fadiga, Luciano},
+  title = {Human and robotic goal oriented actions evoke motor resonance a gaze behavior study},
+  journal = {Curr Biol},
+  year = {2004},
+  volume = {14},
+  pages = {117--120}
+}
+</pre></td>
+</tr>
+<tr id="nori2003accurate" class="entry">
+	<td>Nori, F. and Frezza, R.</td>
+	<td>Accurate reconstruction of the path followed by a motorcycle from the on-board camera images <p class="infolinks">[<a href="javascript:toggleInfo('nori2003accurate','bibtex')">BibTeX</a>]</p></td>
+	<td>2003</td>
+	<td>Intelligent Vehicles Symposium, 2003. Proceedings. IEEE, pp. 259-264&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_nori2003accurate" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{nori2003accurate,
+  author = {Nori, Francesco and Frezza, Ruggero},
+  title = {Accurate reconstruction of the path followed by a motorcycle from the on-board camera images},
+  booktitle = {Intelligent Vehicles Symposium, 2003. Proceedings. IEEE},
+  year = {2003},
+  pages = {259--264}
+}
+</pre></td>
+</tr>
+<tr id="menegatti2001designing" class="entry">
+	<td>Menegatti, E., Nori, F., Pagello, E., Pellizzari, C. and Spagnoli, D.</td>
+	<td>Designing an omnidirectional vision system for a goalkeeper robot <p class="infolinks">[<a href="javascript:toggleInfo('menegatti2001designing','bibtex')">BibTeX</a>]</p></td>
+	<td>2001</td>
+	<td>Robot Soccer World Cup, pp. 81-91&nbsp;</td>
+	<td>inproceedings</td>
+	<td>&nbsp;</td>
+</tr>
+<tr id="bib_menegatti2001designing" class="bibtex noshow">
+<td colspan="6"><b>BibTeX</b>:
+<pre>
+@inproceedings{menegatti2001designing,
+  author = {Menegatti, Emanuele and Nori, Francesco and Pagello, Enrico and Pellizzari, Carlo and Spagnoli, Davide},
+  title = {Designing an omnidirectional vision system for a goalkeeper robot},
+  booktitle = {Robot Soccer World Cup},
+  year = {2001},
+  pages = {81--91}
+}
+</pre></td>
+</tr>
