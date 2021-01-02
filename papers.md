@@ -1,5 +1,5 @@
 ---
-permalink: /paper/
+permalink: /papers/
 title: "Papers"
 excerpt: "Francesco's scientific papers."
 layout: single
