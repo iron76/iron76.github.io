@@ -1,7 +1,5 @@
 # main links
 main:
-  - title: "About"
-    url: /about/
   - title: "Research"
     url: /research/	
   - title: "Papers"
@@ -10,5 +8,3 @@ main:
     url: /code/
   - title: "Videos"
     url: /videos/	
-  # - title: "Sitemap"
-  #   url: /sitemap/
