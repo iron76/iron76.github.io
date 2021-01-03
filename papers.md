@@ -6,10 +6,10 @@ layout: single
 author_profile: true
 last_modified_at: 2021-01-01T14:51:23-04:00
 toc: true
+load_bib: true
 ---
 
-<style>
-		
+<style>	
 .card {
   font-size: 50%;
   background-color: teal;
@@ -185,4 +185,4 @@ Hereafter a list of most cited and most recent papers. Please refer to my [compl
 
 # Complete list with .bib entries
 
-<script src="https://bibbase.org/show?bib=http%3A%2F%2Firon76.github.io%2Fassets%2Fbibtex%2Fnori.bib&jsonp=1"></script>
+

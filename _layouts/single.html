@@ -41,6 +41,7 @@ layout: default
           </aside>
         {% endif %}
         {{ content }}
+		{% if page.load_bib %} <script src="https://bibbase.org/show?bib=http%3A%2F%2Firon76.github.io%2Fassets%2Fbibtex%2Fnori.bib&jsonp=1"></script> {% endif %}
         {% if page.link %}<div><a href="{{ page.link }}" class="btn btn--primary">{{ site.data.ui-text[site.locale].ext_link_label | default: "Direct Link" }}</a></div>{% endif %}
       </section>
 
