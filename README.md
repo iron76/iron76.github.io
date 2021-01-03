@@ -9,3 +9,4 @@ A local server can be run with the following command:
 ```
 bundle exec jekyll serve
 ```
+The publication list has been extracted from Google Scholar with [google-scholar-export](https://github.com/TWRogers/google-scholar-export).
