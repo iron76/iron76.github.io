@@ -99,6 +99,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  jekyll-twitter-plugin
   minimal-mistakes-jekyll!
   rake (>= 12.3.3)
   webrick (~> 1.7)
