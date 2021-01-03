@@ -74,7 +74,7 @@ last_modified_at: 2021-01-01T14:51:23-04:00
 	</table>
 </body>
 
+
 <aside class="sidebar__right {% if page.toc_sticky %}sticky{% endif %}">
-	<a class="twitter-timeline" data-width="220" data-height="1200" href="https://twitter.com/FranceNori">Tweets by FranceNori</a>
-	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	{% twitter https://twitter.com/FranceNori limit=5 %}
 </aside>
