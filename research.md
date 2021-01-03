@@ -15,7 +15,7 @@ At Deepmind I have been progressively more interested in reinforcement learning 
 * **learning from scratch**, i.e. learning primarily with real-robot data and minimising prior knowledge.
 
 ### Learning real-world tasks from demonstrations
-<em> with R. Jeong, F. Romano, J. Kay, D. Khosid, and K. Bousmalis </em>
+<em> with R. Jeong, N. Heess and J. T. Springenberg</em>
 
 #### Learning Dexterous Manipulation from Suboptimal Experts
 
