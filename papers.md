@@ -42,7 +42,7 @@ load_bib: false
 Hereafter a list of most cited and most recent papers. 
 
 - For a complete and updated list of my publications please refer to [my Google Scholar generate list of publications](https://scholar.google.com/citations?user=t3l8q6gAAAAJ&hl). 
-- For a complete list of the BibTex entries of my publications please refer to [my BibBase generated publication list]({{ site.baseurl }}{% link papers_bib.md %}).
+- For a complete list of the BibTex entries of my publications please refer to [my BibBase generated publication list]({{ site.baseurl }}{% link papers_bib.html %}).
 
 
 # Most cited papers
@@ -1610,4 +1610,4 @@ For a complete and updated list of my publications please refer to [my Google Sc
 
 # Complete list with .bib
 
-For a complete list of the BibTex entries of my publications please refer to [my BibBase generated publication list]({{ site.baseurl }}{% link papers_bib.md %}).
+For a complete list of the BibTex entries of my publications please refer to [my BibBase generated publication list]({{ site.baseurl }}{% link papers_bib.html %}).
