@@ -18,4 +18,19 @@
         style="display: block; width: 100%; text-align: center; background-color: #0a66c2; color: white !important; padding: 6px 0; border-radius: 16px; font-weight: 600; font-size: 14px; text-decoration: none;">
         View Profile
     </a>
+
+    {% if profile.posts %}
+    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e1e9ee;">
+        <h3 style="font-size: 14px; color: #000; margin: 0 0 12px 0; font-weight: 600;">Recent Updates</h3>
+        {% for post in profile.posts %}
+        <div style="margin-bottom: 12px; line-height: 1.4;">
+            <a href="{{ post.url }}" target="_blank" rel="noopener noreferrer"
+                style="font-size: 13px; color: #0a66c2; font-weight: 600; text-decoration: none; display: block; margin-bottom: 2px;">
+                {{ post.title }}
+            </a>
+            <span style="font-size: 11px; color: #5f6368;">{{ post.date }}</span>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
 </div>
