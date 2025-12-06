@@ -8,6 +8,37 @@ last_modified_at: 2021-01-01T14:51:23-04:00
 toc: true
 ---
 
+## 2025 - 2021
+
+At Google DeepMind, I lead the robotics research effort, focusing on bringing Large Language Models (LLMs) and advanced AI into the physical world. This period has seen the development of generalist agents, agile locomotion, and foundation models for robotics.
+
+### Generalist Robot Agents
+<em> with Gemini Robotics Team, RoboCat Team </em>
+
+#### Gemini Robotics 1.5
+<iframe width="560" height="315" src="https://youtube.com/embed/UObzWjPb6XM" frameborder="0" allowfullscreen></iframe>
+
+<p> Gemini Robotics 1.5 represents a significant step towards generalist robots with advanced embodied reasoning. It demonstrates the ability to reason about the physical world, think through complex tasks, and transfer motion skills across different embodiments. </p>
+
+#### RoboCat
+<iframe width="560" height="315" src="https://youtube.com/embed/8WhLzXXs32k" frameborder="0" allowfullscreen></iframe>
+
+<p> RoboCat is a self-improving foundation agent for robotic manipulation. It learns from a large variety of data and can tackle multiple tasks across different robot arms, improving its own performance over time. </p>
+
+
+### Agile Locomotion and Benchmarking
+<em> with T. Haarnoja, K. Caluwaerts, et al. </em>
+
+#### Learning Agile Soccer Skills
+<iframe width="560" height="315" src="https://youtube.com/embed/V4T1ggL9RKc" frameborder="0" allowfullscreen></iframe>
+
+<p> We demonstrated that deep reinforcement learning can train low-cost humanoid robots to play agile 1v1 soccer. The agents learned robust walking, turning, kicking, and fall recovery skills, performing well beyond hand-coded baselines. </p>
+
+#### Barkour: Animal-level Agility
+<iframe width="560" height="315" src="https://youtube.com/embed/EcYzl_qWLKg" frameborder="0" allowfullscreen></iframe>
+
+<p> Barkour is a benchmark for animal-level agility in quadruped robots. It establishes a rigorous standard for evaluating robot locomotion performance on easier-to-compare obstacle courses. </p>
+
 ## 2020 - 2018
 At Deepmind I have been progressively more interested in reinforcement learning on real robots. I have  gained experience with the problems underling the application of deep neural networks at scale in the field of robotics. This new line of research have produced relevant publications in the area of:
 * **learning from demonstrations**, i.e. learning using the prior knowledge embedded in a successful execution of the task;
