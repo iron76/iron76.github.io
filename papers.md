@@ -9,39 +9,80 @@ toc: true
 load_bib: false
 ---
 
-<style>	
+<style>
 .card {
-  font-size: 50%;
-  background-color: teal;
-  color: white;
-  border: 1px solid black;
-  margin: 5px;
-}
-.card a:link{
-    color:#FFFFFF;
-}
-.card a:visited{
-    color:#FFFFFF;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0; /* Slate 200 */
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  margin-bottom: 1.5rem;
+  transition: all 0.2s ease-in-out;
+  overflow: hidden;
 }
 
-.card-footer {	
-  background-color: white;
-  color: teal;
-  border: 1px solid black;
-  margin: 2px;
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+  border-color: #cbd5e1; /* Slate 300 */
 }
-.card-footer a:link{
-    color:teal;
+
+.card-publication {
+  padding: 1.5rem;
 }
-.card-footer a:visited{
-    color:teal;
+
+.card-publication h4 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.card-publication h4 a {
+  color: #0f172a; /* Slate 900 */
+  text-decoration: none;
+}
+
+.card-publication h4 a:hover {
+  color: #0ea5e9; /* Sky 500 */
+}
+
+.card-publication p {
+  margin-bottom: 0.5rem;
+  color: #64748b; /* Slate 500 */
+  font-size: 0.95rem;
+}
+
+.card-footer {
+  background-color: #f8fafc; /* Slate 50 */
+  border-top: 1px solid #e2e8f0;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer a {
+  color: #0ea5e9;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.card-footer a:hover {
+  text-decoration: underline;
+}
+
+.card-body-left {
+    /* Resetting generic classes if needed */
 }
 </style>
 
 
 Hereafter a list of most cited and most recent papers. 
 
-- For a complete and updated list of my publications please refer to [my Google Scholar generate list of publications](https://scholar.google.com/citations?user=t3l8q6gAAAAJ&hl). 
+- For a complete and updated list of my publications please refer to [my Google Scholar](https://scholar.google.com/citations?user=t3l8q6gAAAAJ&hl). 
 - For a complete list of the BibTex entries of my publications please refer to [my BibBase generated publication list]({{ site.baseurl }}{% link papers_bib.html %}).
 
 
@@ -50,144 +91,192 @@ Hereafter a list of most cited and most recent papers.
 <div class="card">
     <div class="card-publication">
         <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3AcFHS6HbyZ2cC">The iCub humanoid robot: an open platform for research in embodied cognition</a></h4>
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:cFHS6HbyZ2cC">The iCub humanoid robot: an open platform for research in embodied cognition</a></h4>
             <p style="font-style: italic;">by G Metta, G Sandini, D Vernon, L Natale, F Nori</p>
-            <p><b>Proceedings of the 8th workshop on performance metrics for intelligent …</b></p>
+            <p><b>Proceedings of the 8th workshop on performance metrics for intelligent systems</b></p>
         </div>
     </div>
     <div class="card-footer">
         <small class="text-muted">Published in <b>2008</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=8934831380734927669">Citations: <b>630</b></a></small>
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=8934831380734927669">Citations: <b>816</b></a></small>
     </div>
 </div>
 
 <div class="card">
     <div class="card-publication">
         <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3AY5dfb0dijaUC">The iCub humanoid robot: An open-systems platform for research in cognitive development</a></h4>
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:Y5dfb0dijaUC">The iCub humanoid robot: An open-systems platform for research in cognitive development</a></h4>
             <p style="font-style: italic;">by G Metta, L Natale, F Nori, G Sandini, D Vernon, L Fadiga, C Von Hofsten, ...</p>
             <p><b>Neural networks 23 (8-9), 1125-1134</b></p>
         </div>
     </div>
     <div class="card-footer">
         <small class="text-muted">Published in <b>2010</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=15495669726245721839">Citations: <b>478</b></a></small>
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=15495669726245721839">Citations: <b>749</b></a></small>
     </div>
 </div>
 
 <div class="card">
     <div class="card-publication">
         <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3AeJXPG6dFmWUC">Integration of action and language knowledge: A roadmap for developmental robotics</a></h4>
-            <p style="font-style: italic;">by A Cangelosi, G Metta, G Sagerer, S Nolfi, C Nehaniv, K Fischer, J Tani, ...</p>
-            <p><b>IEEE Transactions on Autonomous Mental Development 2 (3), 167-195</b></p>
-        </div>
-    </div>
-    <div class="card-footer">
-        <small class="text-muted">Published in <b>2010</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=13792573796911307985">Citations: <b>201</b></a></small>
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-publication">
-        <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3APR6Y55bgFSsC">An experimental evaluation of a novel minimum-jerk cartesian controller for humanoid robots</a></h4>
-            <p style="font-style: italic;">by U Pattacini, F Nori, L Natale, G Metta, G Sandini</p>
-            <p><b>2010 IEEE/RSJ international conference on intelligent robots and systems …</b></p>
-        </div>
-    </div>
-    <div class="card-footer">
-        <small class="text-muted">Published in <b>2010</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=16463534162510439517">Citations: <b>193</b></a></small>
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-publication">
-        <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3AeflP2zaiRacC">An open-source simulator for cognitive robotics research: the prototype of the iCub humanoid robot simulator</a></h4>
-            <p style="font-style: italic;">by V Tikhanoff, A Cangelosi, P Fitzpatrick, G Metta, L Natale, F Nori</p>
-            <p><b>Proceedings of the 8th workshop on performance metrics for intelligent …</b></p>
-        </div>
-    </div>
-    <div class="card-footer">
-        <small class="text-muted">Published in <b>2008</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=14163440150320465749">Citations: <b>191</b></a></small>
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-publication">
-        <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3ACHSYGLWDkRkC">Robots with a sense of touch</a></h4>
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:CHSYGLWDkRkC">Robots with a sense of touch</a></h4>
             <p style="font-style: italic;">by C Bartolozzi, L Natale, F Nori, G Metta</p>
             <p><b>Nature materials 15 (9), 921</b></p>
         </div>
     </div>
     <div class="card-footer">
         <small class="text-muted">Published in <b>2016</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=9778566210297308990">Citations: <b>133</b></a></small>
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=9778566210297308990">Citations: <b>342</b></a></small>
     </div>
 </div>
 
 <div class="card">
     <div class="card-publication">
         <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3Ar0BpntZqJG4C">Evidence for composite cost functions in arm movement planning: an inverse optimal control approach</a></h4>
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:r0BpntZqJG4C">Evidence for composite cost functions in arm movement planning: an inverse optimal control approach</a></h4>
             <p style="font-style: italic;">by B Berret, E Chiovetto, F Nori, T Pozzo</p>
             <p><b>PLoS Comput Biol 7 (10), e1002183</b></p>
         </div>
     </div>
     <div class="card-footer">
         <small class="text-muted">Published in <b>2011</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=5160278785351058893">Citations: <b>131</b></a></small>
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=5160278785351058893">Citations: <b>278</b></a></small>
     </div>
 </div>
 
 <div class="card">
     <div class="card-publication">
         <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3ASdhP9T11ey4C">Muscle synergies in neuroscience and robotics: from input-space to task-space perspectives</a></h4>
-            <p style="font-style: italic;">by C Alessandro, I Delis, F Nori, S Panzeri, B Berret</p>
-            <p><b>Frontiers in computational neuroscience 7, 43</b></p>
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:vbGhcppDl1QC">Learning agile soccer skills for a bipedal robot with deep reinforcement learning</a></h4>
+            <p style="font-style: italic;">by T Haarnoja, B Moran, G Lever, S Huang, F Nori, et al.</p>
+            <p><b>Science Robotics</b></p>
         </div>
     </div>
     <div class="card-footer">
-        <small class="text-muted">Published in <b>2013</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=15690597534001141280">Citations: <b>117</b></a></small>
+        <small class="text-muted">Published in <b>2024</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=10004408185438690715">Citations: <b>261</b></a></small>
     </div>
 </div>
 
 <div class="card">
     <div class="card-publication">
         <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3A-f6ydRqryjwC">The design of the iCub humanoid robot</a></h4>
-            <p style="font-style: italic;">by A Parmiggiani, M Maggiali, L Natale, F Nori, A Schmitz, N Tsagarakis, ...</p>
-            <p><b>International journal of humanoid robotics 9 (04), 1250027</b></p>
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:eJXPG6dFmWUC">Integration of action and language knowledge: A roadmap for developmental robotics</a></h4>
+            <p style="font-style: italic;">by A Cangelosi, G Metta, G Sagerer, S Nolfi, C Nehaniv, K Fischer, J Tani, ...</p>
+            <p><b>IEEE Transactions on Autonomous Mental Development 2 (3), 167-195</b></p>
         </div>
     </div>
     <div class="card-footer">
-        <small class="text-muted">Published in <b>2012</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=4480601651783451512">Citations: <b>94</b></a></small>
+        <small class="text-muted">Published in <b>2010</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=13792573796911307985">Citations: <b>247</b></a></small>
     </div>
 </div>
 
 <div class="card">
     <div class="card-publication">
         <div class="card-body card-body-left">
-            <h4><a href="https://scholar.google.co.uk/citations?user=t3l8q6gAAAAJ&pagesize=10&sortby=citations#d=gs_md_cita-d&u=%2Fcitations%3Fview_op%3Dview_citation%26hl%3Dit%26oe%3DASCII%26user%3Dt3l8q6gAAAAJ%26pagesize%3D10%26citation_for_view%3Dt3l8q6gAAAAJ%3ApqnbT2bcN3wC">James: A humanoid robot acting over an unstructured world</a></h4>
-            <p style="font-style: italic;">by L Jamone, G Metta, F Nori, G Sandini</p>
-            <p><b>2006 6th IEEE-RAS International Conference on Humanoid Robots, 143-150</b></p>
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:PR6Y55bgFSsC">An experimental evaluation of a novel minimum-jerk cartesian controller for humanoid robots</a></h4>
+            <p style="font-style: italic;">by U Pattacini, F Nori, L Natale, G Metta, G Sandini</p>
+            <p><b>IEEE/RSJ international conference on intelligent robots and systems</b></p>
         </div>
     </div>
     <div class="card-footer">
-        <small class="text-muted">Published in <b>2006</b> | 
-        <a href="https://scholar.google.co.uk/scholar?oi=bibs&hl=it&oe=ASCII&cites=7671359052840791460">Citations: <b>81</b></a></small>
+        <small class="text-muted">Published in <b>2010</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=16463534162510439517">Citations: <b>234</b></a></small>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-publication">
+        <div class="card-body card-body-left">
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:eflP2zaiRacC">An open-source simulator for cognitive robotics research: the prototype of the iCub humanoid robot simulator</a></h4>
+            <p style="font-style: italic;">by V Tikhanoff, A Cangelosi, P Fitzpatrick, G Metta, L Natale, F Nori</p>
+            <p><b>Proceedings of the 8th workshop on performance metrics for intelligent systems</b></p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Published in <b>2008</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=14163440150320465749">Citations: <b>216</b></a></small>
     </div>
 </div>
 
 # Recent papers
+
+## 2025
+
+<div class="card">
+    <div class="card-publication">
+        <div class="card-body card-body-left">
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:S16KYo8Pm5AC">Gemini robotics 1.5: Pushing the frontier of generalist robots with advanced embodied reasoning, thinking, and motion transfer</a></h4>
+            <p style="font-style: italic;">by Gemini Robotics Team (DeepMind)</p>
+            <p><b>arXiv preprint arXiv:2510.03342</b></p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Published in <b>2025</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=16309442468295407044">Citations: <b>5</b></a></small>
+    </div>
+</div>
+
+## 2024
+
+<div class="card">
+    <div class="card-publication">
+        <div class="card-body card-body-left">
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:vbGhcppDl1QC">Learning agile soccer skills for a bipedal robot with deep reinforcement learning</a></h4>
+            <p style="font-style: italic;">by T Haarnoja, B Moran, G Lever, S Huang, F Nori, et al.</p>
+            <p><b>Science Robotics</b></p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Published in <b>2024</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=10004408185438690715">Citations: <b>261</b></a></small>
+    </div>
+</div>
+
+## 2023
+
+<div class="card">
+    <div class="card-publication">
+        <div class="card-body card-body-left">
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:VaXvl8Fpj5cC">Gemini robotics: Bringing ai into the physical world</a></h4>
+            <p style="font-style: italic;">by Gemini Robotics Team (DeepMind)</p>
+            <p><b>arXiv preprint arXiv:2306.11706</b></p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Published in <b>2023</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=4375048401925214468">Citations: <b>162</b></a></small>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-publication">
+        <div class="card-body card-body-left">
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:ILKRHgRFtOwC">Robocat: A self-improving foundation agent for robotic manipulation</a></h4>
+            <p style="font-style: italic;">by Y Zhou, T Davchev, M Bauza, K Bousmalis, G Vezzani, F Nori, et al.</p>
+            <p><b>Transactions on Machine Learning Research</b></p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Published in <b>2023</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=2915129388100638987">Citations: <b>119</b></a></small>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-publication">
+        <div class="card-body card-body-left">
+            <h4><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&oe=ASCII&user=t3l8q6gAAAAJ&citation_for_view=t3l8q6gAAAAJ:L7CI7m0gUJcC">Barkour: Benchmarking animal-level agility with quadruped robots</a></h4>
+            <p style="font-style: italic;">by K Caluwaerts, A Iscen, JC Kew, W Yu, T Zhang, D Freeman, F Nori, et al.</p>
+            <p><b>arXiv preprint arXiv:2305.14654</b></p>
+        </div>
+    </div>
+    <div class="card-footer">
+        <small class="text-muted">Published in <b>2023</b> | 
+        <a href="https://scholar.google.com/scholar?oi=bibs&hl=en&oe=ASCII&cites=11647307218980987179">Citations: <b>88</b></a></small>
+    </div>
+</div>
 
 ## 2020
 
@@ -1606,7 +1695,7 @@ Hereafter a list of most cited and most recent papers.
 
 # Complete list
 
-For a complete and updated list of my publications please refer to [my Google Scholar generate list of publications](https://scholar.google.com/citations?user=t3l8q6gAAAAJ&hl). 
+For a complete and updated list of my publications please refer to [my Google Scholar](https://scholar.google.com/citations?user=t3l8q6gAAAAJ&hl). 
 
 # Complete list with .bib
 

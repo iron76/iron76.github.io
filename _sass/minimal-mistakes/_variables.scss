@@ -14,7 +14,7 @@ $indent-var: 1.3em !default;
 
 /* system typefaces */
 $serif: Georgia, Times, serif !default;
-$sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
+$sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
 
@@ -55,31 +55,31 @@ $h-size-6: 1em !default; // ~16px
    Colors
    ========================================================================== */
 
-$gray: #7a8288 !default;
-$dark-gray: mix(#000, $gray, 50%) !default;
-$darker-gray: mix(#000, $gray, 60%) !default;
-$light-gray: mix(#fff, $gray, 50%) !default;
-$lighter-gray: mix(#fff, $gray, 90%) !default;
+$gray: #64748b !default; // Slate 500
+$dark-gray: #334155 !default; // Slate 700
+$darker-gray: #1e293b !default; // Slate 800
+$light-gray: #cbd5e1 !default; // Slate 300
+$lighter-gray: #f1f5f9 !default; // Slate 100
 
-$background-color: #fff !default;
-$code-background-color: #fafafa !default;
+$background-color: #ffffff !default;
+$code-background-color: #f8fafc !default; // Slate 50
 $code-background-color-dark: $light-gray !default;
-$text-color: $dark-gray !default;
-$muted-text-color: mix(#fff, $text-color, 20%) !default;
-$border-color: $lighter-gray !default;
+$text-color: #0f172a !default; // Slate 900
+$muted-text-color: $gray !default;
+$border-color: $light-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
 
-$primary-color: #6f777d !default;
-$success-color: #3fa63f !default;
-$warning-color: #d67f05 !default;
-$danger-color: #ee5f5b !default;
-$info-color: #3b9cba !default;
+$primary-color: #0ea5e9 !default; // Sky 500
+$success-color: #22c55e !default; // Green 500
+$warning-color: #eab308 !default; // Yellow 500
+$danger-color: #ef4444 !default; // Red 500
+$info-color: #06b6d4 !default; // Cyan 500
 $focus-color: $primary-color !default;
 $active-color: mix(#fff, $primary-color, 80%) !default;
 
 /* YIQ color contrast */
-$yiq-contrasted-dark-default: $dark-gray !default;
+$yiq-contrasted-dark-default: $darker-gray !default;
 $yiq-contrasted-light-default: #fff !default;
 $yiq-contrasted-threshold: 175 !default;
 $yiq-debug: false !default;
@@ -111,7 +111,7 @@ $youtube-color: #bb0000 !default;
 $xing-color: #006567 !default;
 
 /* links */
-$link-color: mix(#000, $info-color, 20%) !default;
+$link-color: $primary-color !default;
 $link-color-hover: mix(#000, $link-color, 25%) !default;
 $link-color-visited: mix(#fff, $link-color, 15%) !default;
 $masthead-link-color: $primary-color !default;
