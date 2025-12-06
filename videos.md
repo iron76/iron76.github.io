@@ -8,6 +8,29 @@ last_modified_at: 2021-01-01T14:51:23-04:00
 toc: true
 ---
 
+### Generalist Robot Agents (2025 - 2023)
+<em> with Gemini Robotics Team, RoboCat Team </em>
+
+#### Gemini Robotics 1.5
+
+<iframe width="560" height="315" src="https://youtube.com/embed/UObzWjPb6XM" frameborder="0" allowfullscreen></iframe>
+
+#### RoboCat
+
+<iframe width="560" height="315" src="https://youtube.com/embed/8WhLzXXs32k" frameborder="0" allowfullscreen></iframe>
+
+
+### Agile Locomotion and Benchmarking (2024 - 2023)
+<em> with T. Haarnoja, K. Caluwaerts, et al. </em>
+
+#### Learning Agile Soccer Skills
+
+<iframe width="560" height="315" src="https://youtube.com/embed/V4T1ggL9RKc" frameborder="0" allowfullscreen></iframe>
+
+#### Barkour: Animal-level Agility
+
+<iframe width="560" height="315" src="https://youtube.com/embed/EcYzl_qWLKg" frameborder="0" allowfullscreen></iframe>
+
 ### Learning real-world tasks from demonstrations
 <em> with R. Jeong, F. Romano, J. Kay, D. Khosid, and K. Bousmalis </em>
 

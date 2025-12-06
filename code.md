@@ -8,6 +8,22 @@ last_modified_at: 2021-01-01T14:51:23-04:00
 toc: true
 ---
 
+# dm_robotics
+
+[![GitHub stars](https://img.shields.io/github/stars/google-deepmind/dm_robotics?style=social)](https://github.com/google-deepmind/dm_robotics)
+[![License](https://img.shields.io/github/license/google-deepmind/dm_robotics)](https://github.com/google-deepmind/dm_robotics/blob/main/LICENSE)
+
+[dm_robotics](https://github.com/google-deepmind/dm_robotics) is a collection of libraries, tools, and tasks developed by Google DeepMind specifically for robotics research. It provides a comprehensive framework for building and experimenting with robotic agents.
+
+Key components include:
+*   **AgentFlow**: A library for composing reinforcement learning agents and distinct sub-tasks.
+*   **MoMa (Mobile Manipulation)**: A detailed framework for defining manipulation tasks and environments, supporting both simulated (via MuJoCo) and real-world robot setups.
+*   **Geometry & Transformations**: Primitives for handling scene geometry and rigid body transformations.
+*   **Vision**: Tools for visual blob detection and tracking.
+*   **Manipulation**: "RGB" object meshes and utilities for creating simulated robotic cells.
+*   **Controllers**: Robust controllers including QP-optimization based Cartesian controllers.
+
+This library is often used in conjunction with [dm_control](https://github.com/google-deepmind/dm_control) to create advanced physics-based simulation environments.
 
 # YARP
 
