@@ -74,11 +74,11 @@ $border-color: $light-gray !default;
 $form-background-color: $lighter-gray !default;
 $footer-background-color: $lighter-gray !default;
 
-$primary-color: #0ea5e9 !default; // Sky 500
-$success-color: #22c55e !default; // Green 500
-$warning-color: #eab308 !default; // Yellow 500
-$danger-color: #ef4444 !default; // Red 500
-$info-color: #06b6d4 !default; // Cyan 500
+$primary-color: #008080 !default; // Teal/Dark Green
+$success-color: #059669 !default; // Emerald 600
+$warning-color: #d97706 !default; // Amber 600
+$danger-color: #dc2626 !default; // Red 600
+$info-color: #0d9488 !default; // Teal 600
 $focus-color: $primary-color !default;
 $active-color: mix(#fff, $primary-color, 80%) !default;
 
@@ -116,11 +116,11 @@ $xing-color: #006567 !default;
 
 /* links */
 $link-color: $primary-color !default;
-$link-color-hover: mix(#000, $link-color, 25%) !default;
-$link-color-visited: mix(#fff, $link-color, 15%) !default;
+$link-color-hover: mix(#000, $link-color, 30%) !default;
+$link-color-visited: mix(#000, $link-color, 15%) !default;
 $masthead-link-color: $primary-color !default;
-$masthead-link-color-hover: mix(#000, $primary-color, 25%) !default;
-$navicon-link-color-hover: mix(#fff, $primary-color, 75%) !default;
+$masthead-link-color-hover: mix(#000, $primary-color, 30%) !default;
+$navicon-link-color-hover: mix(#fff, $primary-color, 70%) !default;
 
 /* syntax highlighting (base16) */
 $base00: #263238 !default;
@@ -163,8 +163,8 @@ $right-sidebar-width-wide: 400px !default;
    Other
    ========================================================================== */
 
-$border-radius: 4px !default;
-$box-shadow: 0 1px 1px rgba(0, 0, 0, 0.125) !default;
+$border-radius: 6px !default;
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !default;
 $nav-height: 2em !default;
 $nav-toggle-height: 2rem !default;
 $navicon-width: 1.5rem !default;
