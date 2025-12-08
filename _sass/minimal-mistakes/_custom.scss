@@ -113,6 +113,11 @@ pre {
 .page__content {
     font-size: 1em;
 
+    p {
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
     @include breakpoint($medium) {
         font-size: 1.0625em; // Slightly larger on bigger screens
     }
