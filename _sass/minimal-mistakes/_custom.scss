@@ -123,6 +123,13 @@ pre {
     }
 }
 
+/* Text justification for body paragraphs (for pages with raw body tags) */
+body>p,
+article p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
 /* Enhanced author sidebar */
 .author__avatar {
     img {
